@@ -1,11 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Heelo</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/Home.css" />
+  </head>
+  <body>
+    <!-- Video Background -->
+    <video class="video-background" autoplay muted loop>
+      <source src="./image/Home.mp4" type="video/mp4" />
+    </video>
+    <div class="video-overlay"></div>
+
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav-container">
+        <div class="logo">
+          <div class="logo-icon">D</div>
+          DEVHERDS
+        </div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#blogs">Blogs</a></li>
+        </ul>
+        <div style="display: flex; align-items: center; gap: 1rem">
+          <a href="#contact" class="contact-btn">Contact Us</a>
+          <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <!-- Tech Icons -->
+      <div class="tech-icon icon-flutter">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.37zm.159 11.871L6.857 19.48l4.895 4.52L24 11.743l-4.537-4.537L14.473 11.87z"
+            fill="#02569B"
+          />
+        </svg>
+      </div>
+
+      <div class="tech-icon icon-swift">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="#FA7343">
+          <path
+            d="M7.508 0c-.287 0-.573.102-.792.306L.308 6.714C.103 6.933 0 7.22 0 7.508s.102.574.308.793l6.408 6.408c.22.204.505.306.792.306s.573-.102.792-.306l6.408-6.408c.204-.22.306-.505.306-.793s-.102-.573-.306-.792L8.3.306C8.08.102 7.795 0 7.508 0z"
+          />
+        </svg>
+      </div>
+
+      <div class="tech-icon icon-react">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="#61DAFB">
+          <circle cx="12" cy="12" r="1.5" />
+          <path
+            d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"
+          />
+        </svg>
+      </div>
+
+      <div class="tech-icon icon-angular">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="#DD0031">
+          <path d="M12 2L1.5 6.5L3 17.5L12 22L21 17.5L22.5 6.5L12 2z" />
+          <path d="M12 2v20" stroke="white" stroke-width="1" />
+        </svg>
+      </div>
+
+      <div class="tech-icon icon-mongodb">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="#47A248">
+          <path
+            d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A73.49 73.49 0 0111.91 24h.481c.114-1.032.284-2.056.51-3.07.417-.296 5.17-3.582 4.292-11.375z"
+          />
+        </svg>
+      </div>
+
+      <div class="tech-icon icon-nodejs">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="#339933">
+          <path
+            d="M12 0c-.403 0-.803.156-1.104.469L1.703 9.672c-.601.625-.601 1.631 0 2.256l9.193 9.203c.602.625 1.606.625 2.208 0l9.193-9.203c.601-.625.601-1.631 0-2.256L13.104.469C12.803.156 12.403 0 12 0z"
+          />
+        </svg>
+      </div>
+
+      <div class="tech-icon icon-whatsapp">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="#25D366">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.051 3.488"
+          />
+        </svg>
+      </div>
+
+      <div class="hero-content">
+        <p class="hero-subtitle">We Are Trusted</p>
+        <h1 class="hero-title">
+          <span class="brackets" style="color: #e81423">{</span>
+          <span class="highlight" id="typed-text"></span>
+          <span class="brackets" style="color: #4960ac">}</span>
+        </h1>
+
+        <p class="hero-description">For your Digital Transformation</p>
+        <a href="#connect" class="cta-button">
+          Let's Connect
+          <span>→</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="logo-section">
+      <h2>TRUSTED BY LEADERS WORLDWIDE</h2>
+      <div class="logo-slider">
+        <div class="logo-track">
+          <!-- Repeat logos for smooth looping -->
+          <img src="./image/Slider_1.svg" alt="Logo" />
+          <img src="./image/Slider_1.svg" alt="Logo" />
+          <img src="./image/Slider_1.svg" alt="Logo" />
+          <img src="./image/Slider_1.svg" alt="Logo" />
+          <img src="./image/Slider_1.svg" alt="Logo" />
+          <img src="./image/Slider_1.svg" alt="Logo" />
+          <img src="./image/Slider_1.svg" alt="Logo" />
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="./js/Home.js"></script>
+  </body>
 </html>
