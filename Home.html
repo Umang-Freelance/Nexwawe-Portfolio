@@ -1,0 +1,2025 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/Home.css" />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://www.w3schools.com/w3css/w3css_animate.asp"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <title>Document</title>
+  </head>
+  <body style="margin: 0px">
+    <!-- Header -->
+    <header class="container header">
+      <nav class="nav-container">
+        <div class="logo"><img src="./image/companylogo.png" alt="" /></div>
+        <ul class="nav-menu m-0 p-0" id="navMenu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li class="has-dropdown"><a href="#services">Services</a></li>
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#blog">Blog</a></li>
+        </ul>
+        <div class="nav-buttons-group">
+          <a href="#contact" class="btn-primary">GET IN TOUCH</a>
+          <a href="#entrepreneur" class="btn-secondary">FOR ENTREPRENEURS</a>
+          <a href="#" class="menu-btn"
+            ><img src="./image/menu.webp" alt=""
+          /></a>
+        </div>
+        <button
+          class="mobile-menu-toggle"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasTop"
+          aria-controls="offcanvasTop"
+        >
+          ☰
+        </button>
+      </nav>
+    </header>
+
+    <div
+      class="offcanvas offcanvas-top seth"
+      tabindex="-1"
+      id="offcanvasTop"
+      aria-labelledby="offcanvasTopLabel"
+    >
+      <div class="offcanvas-header setbg" style="padding: 20px 40px">
+        <div class="logo"><img src="./image/companylogo.png" alt="" /></div>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body setbg">
+        <nav class="nav-container">
+          <ul class="nav-menu navMenu m-0 p-0" id="navMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#solutions">Solutions</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#blog">Blog</a></li>
+          </ul>
+          <div class="nav-buttons-group">
+            <a href="#contact" class="btn-primary">GET IN TOUCH</a>
+            <a href="#entrepreneur" class="btn-secondary">FOR ENTREPRENEURS</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Service menu -->
+    <!-- <div class="container services-wrapper">
+      <div class="services-left">
+        <h2>SERVICES THAT WE PROVIDE</h2>
+        <div class="services-grid">
+          <div class="service-item">
+            <div class="service-icon blue">💻</div>
+            <div class="service-content">
+              <h5>Software Development</h5>
+              <p>Understand user needs and habits.</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon teal">📱</div>
+            <div class="service-content">
+              <h5>Mobile App Development</h5>
+              <p>Mobile app user trend analysis</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon purple">🌐</div>
+            <div class="service-content">
+              <h5>Web App Development</h5>
+              <p>Creating dynamic web applications.</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon orange">⛓️</div>
+            <div class="service-content">
+              <h5>Blockchain Development Company</h5>
+              <p>Creating Blockchain Apps.</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon green">💰</div>
+            <div class="service-content">
+              <h5>Cryptocurrency Development</h5>
+              <p>Creating Crypto Web & Apps</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon pink">🚀</div>
+            <div class="service-content">
+              <h5>MVP Development</h5>
+              <p>Build MVP Development</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon cyan">🏢</div>
+            <div class="service-content">
+              <h5>Enterprise Software Development</h5>
+              <p>Measure B2B Scope</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon indigo">🎨</div>
+            <div class="service-content">
+              <h5>UX/UI Designing</h5>
+              <p>Creating User centric design</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon blue">🤖</div>
+            <div class="service-content">
+              <h5>AI Development Services</h5>
+              <p>Implementing AI in softwares</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon teal">👥</div>
+            <div class="service-content">
+              <h5>Hire Software Developers</h5>
+              <p>Hire Top Talent as per need</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon purple">📊</div>
+            <div class="service-content">
+              <h5>Digital Marketing</h5>
+              <p>Boost brand awareness & conversions</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-icon orange">⚡</div>
+            <div class="service-content">
+              <h5>IT Staff Augmentation</h5>
+              <p>Flexible hiring to scale faster</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="services-right">
+        <h3>EGUIDE</h3>
+        <div class="eguide-box">
+          <img src="./image/eguide-book.png" alt="Ebook" class="eguide-img" />
+          <div class="eguide-info">
+            <strong>E Guide</strong>
+            <h4>App Monetization Strategies: How to Make Money From an App?</h4>
+            <p class="eguide-date">Jun 22, 2025</p>
+            <a href="#" class="download-btn">Download now</a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!--Hero -->
+    <section class="hero" id="home">
+      <video
+        class="video-background"
+        src="./image/home.mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+      <div class="overlay"></div>
+      <div class="technology-icon icon-1">
+        <img src="./image/tech2.png" alt="" />
+      </div>
+      <div class="technology-icon icon-2">
+        <img src="./image/tech5.png" alt="" />
+      </div>
+      <div class="technology-icon icon-3">
+        <img src="./image/tech9.png" alt="" />
+      </div>
+      <div class="technology-icon icon-4">
+        <img src="./image/tech20.png" alt="" />
+      </div>
+      <div class="technology-icon icon-6">
+        <img src="./image/tech1.png" alt="" />
+      </div>
+      <div class="technology-icon icon-7">
+        <img src="./image/tech4.png" alt="" />
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-subtitle">We Are Trusted</div>
+        <h1 class="hero-title">
+          <span class="hero-highlight">{</span>
+          <span id="typed-text"></span>
+          <span class="hero-highlight">}</span>
+        </h1>
+        <p class="hero-desc">For Your Digital Transformation</p>
+        <div class="hero-cta">
+          <a href="#connect" class="hero-btn"
+            >Let's Connect <i class="fa-solid fa-greater-than"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trusted By -->
+    <section class="container trusted-by">
+      <div class="trusted-logos">
+        <div>
+          <img style="width: 150px" src="./image/slider1.webp" alt="" />
+        </div>
+        <div style="font-weight: bold; font-size: 1.2rem; color: #ffffff">
+          <img src="./image/one.png" alt="" />
+        </div>
+        <div style="font-weight: bold; font-size: 1.2rem; color: #ffffff">
+          <img src="./image/two.png" alt="" />
+        </div>
+        <div style="font-weight: bold; font-size: 1.2rem; color: #ffffff">
+          <img src="./image/three.png" alt="" />
+        </div>
+        <div style="font-weight: bold; font-size: 1.2rem; color: #ffffff">
+          <img src="./image/four.png" alt="" />
+        </div>
+        <div style="font-weight: bold; font-size: 1.2rem; color: #ffffff">
+          <img src="./image/five.png" alt="" />
+        </div>
+        <div style="font-weight: bold; font-size: 1.2rem; color: #ffffff">
+          <img src="./image/six.png" alt="" />
+        </div>
+        <div style="font-weight: bold; font-size: 1.2rem; color: #ffffff">
+          <img src="./image/seven.png" alt="" />
+        </div>
+        <div style="font-weight: bold; font-size: 1.2rem; color: #ffffff">
+          <img src="./image/three.png" alt="" />
+        </div>
+      </div>
+
+      <div class="trusted-logos">
+        <div>
+          <img style="width: 150px" src="./image/slider1.webp" alt="" />
+        </div>
+        <div style="font-weight: bold; font-size: 1.2rem; color: #ffffff">
+          <img src="./image/one.png" alt="" />
+        </div>
+        <div style="font-weight: bold; font-size: 1.2rem; color: #ffffff">
+          <img src="./image/two.png" alt="" />
+        </div>
+        <div style="font-weight: bold; font-size: 1.2rem; color: #ffffff">
+          <img src="./image/three.png" alt="" />
+        </div>
+        <div style="font-weight: bold; font-size: 1.2rem; color: #ffffff">
+          <img src="./image/four.png" alt="" />
+        </div>
+        <div style="font-weight: bold; font-size: 1.2rem; color: #ffffff">
+          <img src="./image/five.png" alt="" />
+        </div>
+        <div style="font-weight: bold; font-size: 1.2rem; color: #ffffff">
+          <img src="./image/six.png" alt="" />
+        </div>
+        <div style="font-weight: bold; font-size: 1.2rem; color: #ffffff">
+          <img src="./image/seven.png" alt="" />
+        </div>
+        <div style="font-weight: bold; font-size: 1.2rem; color: #ffffff">
+          <img src="./image/three.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <div class="container" style="display: flex">
+      <div class="timeline">
+        <div class="circle-bg">
+          <img src="./image/circle.png" alt="circle" />
+        </div>
+        <div class="timeline-items">
+          <div class="item" data-index="0" style="top: 90px; left: 200px">
+            AI Development
+          </div>
+          <div class="item" data-index="1" style="top: 145px; left: 300px">
+            App Development
+          </div>
+          <div class="item" data-index="2" style="top: 210px; left: 360px">
+            Web Development
+          </div>
+          <div class="item" data-index="3" style="top: 275px; left: 380px">
+            E-Commerce Solution
+          </div>
+          <div class="item" data-index="4" style="top: 340px; left: 380px">
+            UI/UX Development
+          </div>
+          <div class="item" data-index="5" style="top: 405px; left: 365px">
+            Chatbot Development
+          </div>
+          <div class="item" data-index="6" style="top: 470px; left: 330px">
+            Cloud Development
+          </div>
+          <div class="item" data-index="7" style="top: 530px; left: 270px">
+            Software Development
+          </div>
+          <div class="item" data-index="8" style="top: 585px; left: 160px">
+            IoT Development
+          </div>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="number-bg">
+          <img id="number-img" src="./image/1.png" alt="" />
+        </div>
+        <div class="card">
+          <h2 id="card-title">AI Development</h2>
+          <p id="card-text">
+            Reimagine your business with AI Technology. We provide innovative
+            solutions that make work easier and boost production and
+            profitability.
+          </p>
+          <div class="images">
+            <img id="img1" src="./image/ai.png" alt="AI Robot" class="robot" />
+            <img id="img2" src="./image/ai2.png" alt="AI Chip" class="chip" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Awards & Recognition -->
+    <div class="container" style="padding: 40px 0px">
+      <section class="awards-section">
+        <div class="awards-content">
+          <div
+            class="left-content"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+          >
+            <h1 class="sec-title">Awards & Recognition</h1>
+            <p class="section-description">
+              The awards that inspire us to keep upgrading the standards
+              inourweb and mobile development services.
+            </p>
+            <div class="rating-display">
+              <div class="rating-number">
+                <img
+                  style="width: 100px"
+                  src="./image/awardRating.png"
+                  alt=""
+                />
+              </div>
+              <div style="flex-direction: column">
+                <div class="stars">
+                  <img src="./image/star.png" alt="" />
+                  <img src="./image/star.png" alt="" />
+                  <img src="./image/star.png" alt="" />
+                  <img src="./image/star.png" alt="" />
+                  <img src="./image/star.png" alt="" />
+                </div>
+                <div class="rating-text">
+                  Top Rated Mobile App Development Company
+                </div>
+              </div>
+            </div>
+            <div class="awards-carousel">
+              <div class="carousel-container">
+                <div class="award-badge">
+                  <div class="badge-content">
+                    <img src="./image/awardSlide1.png" alt="" />
+                  </div>
+                </div>
+                <div class="award-badge">
+                  <div class="badge-content">
+                    <img src="./image/awardSlide2.png" alt="" />
+                  </div>
+                </div>
+                <div class="award-badge">
+                  <div class="badge-content">
+                    <img src="./image/awardSlide3.png" alt="" />
+                  </div>
+                </div>
+                <div class="award-badge">
+                  <div class="badge-content">
+                    <img src="./image/awardSlide4.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-dots"></div>
+            </div>
+          </div>
+          <div class="right-content">
+            <div
+              class="company-grid"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              <div class="company-card">
+                <img src="./image/clutch.png" alt="" />
+              </div>
+              <div class="company-card">
+                <img src="./image/goodFirm.png" alt="" />
+              </div>
+              <div class="company-card">
+                <img src="./image/google.png" alt="" />
+              </div>
+            </div>
+            <div
+              class="company-grid2"
+              data-aos="fade-left"
+              data-aos-duration="2000"
+            >
+              <div class="company-card">
+                <img src="./image/digitalMarketing.png" alt="" />
+              </div>
+              <div class="company-card">
+                <img src="./image/appfirmReview.png" alt="" />
+              </div>
+              <div class="company-card">
+                <img src="./image/upwork.png" alt="" />
+              </div>
+              <div class="company-card">
+                <img src="./image/iot.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Industry -->
+    <div class="container" style="padding: 40px 0px">
+      <div class="header-title" data-aos="fade-up" data-aos-duration="2000">
+        <p class="industry-head">INDUSTRY</p>
+        <h1 class="mobile-title">Delivering Results Across All Industries</h1>
+        <p class="subtitle">
+          We provide customized mobile and web solutions that address the unique
+          challenges faced by every industry.
+        </p>
+      </div>
+      <div class="phones-slider owl-carousel">
+        <div class="phone-container">
+          <div class="phone"><img src="./image/mobile1.png" alt="" /></div>
+          <div class="phone-label">Real Estate</div>
+        </div>
+        <div class="phone-container">
+          <div class="phone"><img src="./image/mobile2.png" alt="" /></div>
+          <div class="phone-label">E-Commerce</div>
+        </div>
+        <div class="phone-container">
+          <div class="phone"><img src="./image/mobile3.png" alt="" /></div>
+          <div class="phone-label">Banking</div>
+        </div>
+        <div class="phone-container">
+          <div class="phone"><img src="./image/mobile4.png" alt="" /></div>
+          <div class="phone-label">Food Delivery</div>
+        </div>
+        <div class="phone-container">
+          <div class="phone"><img src="./image/mobile5.png" alt="" /></div>
+          <div class="phone-label">Grocery</div>
+        </div>
+        <div class="phone-container">
+          <div class="phone"><img src="./image/mobile6.png" alt="" /></div>
+          <div class="phone-label">Fitness</div>
+        </div>
+        <div class="phone-container">
+          <div class="phone"><img src="./image/mobile2.png" alt="" /></div>
+          <div class="phone-label">E-Commerce</div>
+        </div>
+        <div class="phone-container">
+          <div class="phone"><img src="./image/mobile5.png" alt="" /></div>
+          <div class="phone-label">Grocery</div>
+        </div>
+        <div class="phone-container">
+          <div class="phone"><img src="./image/mobile1.png" alt="" /></div>
+          <div class="phone-label">Real Estate</div>
+        </div>
+        <div class="phone-container">
+          <div class="phone"><img src="./image/mobile6.png" alt="" /></div>
+          <div class="phone-label">Fitness</div>
+        </div>
+      </div>
+    </div>
+
+    <!--Delivering digital  -->
+    <div class="container" style="padding: 40px 0px">
+      <div class="excellence-container">
+        <div
+          class="header-container"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
+          <h1 class="deliveringDigital-title">Delivering Digital Excellence</h1>
+          <p class="subtitle-container">
+            Transforming ideas into powerful digital experiences with
+            cutting-edgetechnology and innovation.
+          </p>
+        </div>
+        <div class="stats-container">
+          <div class="stat-item">
+            <div class="icon-container">
+              <img style="width: 50px" src="./image/experience.png" alt="" />
+            </div>
+            <div class="stat-number" data-target="40">40+</div>
+            <div class="stat-label">Years of experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="icon-container">
+              <img style="width: 50px" src="./image/projects.png" alt="" />
+            </div>
+            <div class="stat-number" data-target="80">80+</div>
+            <div class="stat-label">Projects Complete</div>
+          </div>
+          <div class="stat-item">
+            <div class="icon-container">
+              <img style="width: 50px" src="./image/member.png" alt="" />
+            </div>
+            <div class="stat-number" data-target="50">50+</div>
+            <div class="stat-label">Team member</div>
+          </div>
+          <div class="stat-item">
+            <div class="icon-container">
+              <img style="width: 50px" src="./image/projects2.png" alt="" />
+            </div>
+            <div class="stat-number" data-target="60">60%</div>
+            <div class="stat-label">Projects Complete</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case study -->
+    <div class="" style="padding: 40px 0px">
+      <div class="head" data-aos="fade-up" data-aos-duration="2000">
+        <div class="case-study-label">Case Study</div>
+        <h1 class="caseStudy-title">More Than Tech - We Deliver Impact</h1>
+        <p class="subtitle">
+          Shaping Your Digital Vision with Exceptional Web and Mobile Solutions.
+        </p>
+      </div>
+
+      <swiper-container
+        class="mySwiper"
+        pagination="true"
+        pagination-clickable="true"
+        space-between="30"
+        centered-slides="true"
+        autoplay-delay="2500"
+        autoplay-disable-on-interaction="false"
+        slides-per-view="auto"
+      >
+        <swiper-slide style="width: 80%">
+          <div class="case-study-card">
+            <div class="content-section">
+              <div class="brand-header">
+                <div class="brand-logo">
+                  <img src="./image/pw.png" alt="" />
+                </div>
+                <h2 class="brand-title">Plan & Work</h2>
+              </div>
+              <p class="description">
+                The Plan&Work app allows our users to check in to
+                theirworkplace,receive detailed plans of their shifts and
+                trackother importantinformation such as work KPIs, statistics
+                andtheir earnings. Thisapp, when used with the Plan&Work
+                SaaSsolution, forms a full-package experience of streamlining
+                theplanning and tracking of workacross the organization.
+              </p>
+              <div class="technologies">
+                <div class="tech-label">Technologies :-</div>
+                <div class="tech-icons">
+                  <div class="tech-icon tech-flutter" style="--delay: 1">
+                    <span><img src="./image/technology1.png" alt="" /></span>
+                  </div>
+                  <div class="tech-icon tech-nodejs" style="--delay: 2">
+                    <span><img src="./image/technology2.png" alt="" /></span>
+                  </div>
+                  <div class="tech-icon tech-angular" style="--delay: 3">
+                    <span><img src="./image/technology3.png" alt="" /></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="actions">
+                <button class="view-case-btn">
+                  <span>●</span>VIEW CASE STUDY
+                </button>
+                <div class="action-icon share-icon">
+                  <span><img src="./image/applelogo.png" alt="" /></span>
+                </div>
+                <div class="action-icon">
+                  <span><img src="./image/playstore.png" alt="" /></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="image-section">
+              <div class="mockup-image">
+                <div class="workspace-scene">
+                  <img src="./image/plan.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide style="width: 80%">
+          <div class="case-study-card">
+            <div class="content-section">
+              <div class="brand-header">
+                <div class="brand-logo">
+                  <img src="./image/pw.png" alt="" />
+                </div>
+                <h2 class="brand-title">Plan & Work</h2>
+              </div>
+              <p class="description">
+                The Plan&Work app allows our users to check in to
+                theirworkplace,receive detailed plans of their shifts and
+                trackother importantinformation such as work KPIs, statistics
+                andtheir earnings. Thisapp, when used with the Plan&Work
+                SaaSsolution, forms a full-package experience of streamlining
+                theplanning and tracking of workacross the organization.
+              </p>
+              <div class="technologies">
+                <div class="tech-label">Technologies :-</div>
+                <div class="tech-icons">
+                  <div class="tech-icon tech-flutter" style="--delay: 1">
+                    <span><img src="./image/technology1.png" alt="" /></span>
+                  </div>
+                  <div class="tech-icon tech-nodejs" style="--delay: 2">
+                    <span><img src="./image/technology2.png" alt="" /></span>
+                  </div>
+                  <div class="tech-icon tech-angular" style="--delay: 3">
+                    <span><img src="./image/technology3.png" alt="" /></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="actions">
+                <button class="view-case-btn">
+                  <span>●</span>VIEW CASE STUDY
+                </button>
+                <div class="action-icon share-icon">
+                  <span><img src="./image/applelogo.png" alt="" /></span>
+                </div>
+                <div class="action-icon">
+                  <span><img src="./image/playstore.png" alt="" /></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="image-section">
+              <div class="mockup-image">
+                <div class="workspace-scene">
+                  <img src="./image/plan.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide style="width: 80%">
+          <div class="case-study-card">
+            <div class="content-section">
+              <div class="brand-header">
+                <div class="brand-logo">
+                  <img src="./image/pw.png" alt="" />
+                </div>
+                <h2 class="brand-title">Plan & Work</h2>
+              </div>
+              <p class="description">
+                The Plan&Work app allows our users to check in to
+                theirworkplace,receive detailed plans of their shifts and
+                trackother importantinformation such as work KPIs, statistics
+                andtheir earnings. Thisapp, when used with the Plan&Work
+                SaaSsolution, forms a full-package experience of streamlining
+                theplanning and tracking of workacross the organization.
+              </p>
+              <div class="technologies">
+                <div class="tech-label">Technologies :-</div>
+                <div class="tech-icons">
+                  <div class="tech-icon tech-flutter" style="--delay: 1">
+                    <span><img src="./image/technology1.png" alt="" /></span>
+                  </div>
+                  <div class="tech-icon tech-nodejs" style="--delay: 2">
+                    <span><img src="./image/technology2.png" alt="" /></span>
+                  </div>
+                  <div class="tech-icon tech-angular" style="--delay: 3">
+                    <span><img src="./image/technology3.png" alt="" /></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="actions">
+                <button class="view-case-btn">
+                  <span>●</span>VIEW CASE STUDY
+                </button>
+                <div class="action-icon share-icon">
+                  <span><img src="./image/applelogo.png" alt="" /></span>
+                </div>
+                <div class="action-icon">
+                  <span><img src="./image/playstore.png" alt="" /></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="image-section">
+              <div class="mockup-image">
+                <div class="workspace-scene">
+                  <img src="./image/plan.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide style="width: 80%">
+          <div class="case-study-card">
+            <div class="content-section">
+              <div class="brand-header">
+                <div class="brand-logo">
+                  <img src="./image/pw.png" alt="" />
+                </div>
+                <h2 class="brand-title">Plan & Work</h2>
+              </div>
+              <p class="description">
+                The Plan&Work app allows our users to check in to
+                theirworkplace,receive detailed plans of their shifts and
+                trackother importantinformation such as work KPIs, statistics
+                andtheir earnings. Thisapp, when used with the Plan&Work
+                SaaSsolution, forms a full-package experience of streamlining
+                theplanning and tracking of workacross the organization.
+              </p>
+              <div class="technologies">
+                <div class="tech-label">Technologies :-</div>
+                <div class="tech-icons">
+                  <div class="tech-icon tech-flutter" style="--delay: 1">
+                    <span><img src="./image/technology1.png" alt="" /></span>
+                  </div>
+                  <div class="tech-icon tech-nodejs" style="--delay: 2">
+                    <span><img src="./image/technology2.png" alt="" /></span>
+                  </div>
+                  <div class="tech-icon tech-angular" style="--delay: 3">
+                    <span><img src="./image/technology3.png" alt="" /></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="actions">
+                <button class="view-case-btn">
+                  <span>●</span>VIEW CASE STUDY
+                </button>
+                <div class="action-icon share-icon">
+                  <span><img src="./image/applelogo.png" alt="" /></span>
+                </div>
+                <div class="action-icon">
+                  <span><img src="./image/playstore.png" alt="" /></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="image-section">
+              <div class="mockup-image">
+                <div class="workspace-scene">
+                  <img src="./image/plan.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide style="width: 80%">
+          <div class="case-study-card">
+            <div class="content-section">
+              <div class="brand-header">
+                <div class="brand-logo">
+                  <img src="./image/pw.png" alt="" />
+                </div>
+                <h2 class="brand-title">Plan & Work</h2>
+              </div>
+              <p class="description">
+                The Plan&Work app allows our users to check in to
+                theirworkplace,receive detailed plans of their shifts and
+                trackother importantinformation such as work KPIs, statistics
+                andtheir earnings. Thisapp, when used with the Plan&Work
+                SaaSsolution, forms a full-package experience of streamlining
+                theplanning and tracking of workacross the organization.
+              </p>
+              <div class="technologies">
+                <div class="tech-label">Technologies :-</div>
+                <div class="tech-icons">
+                  <div class="tech-icon tech-flutter" style="--delay: 1">
+                    <span><img src="./image/technology1.png" alt="" /></span>
+                  </div>
+                  <div class="tech-icon tech-nodejs" style="--delay: 2">
+                    <span><img src="./image/technology2.png" alt="" /></span>
+                  </div>
+                  <div class="tech-icon tech-angular" style="--delay: 3">
+                    <span><img src="./image/technology3.png" alt="" /></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="actions">
+                <button class="view-case-btn">
+                  <span>●</span>VIEW CASE STUDY
+                </button>
+                <div class="action-icon share-icon">
+                  <span><img src="./image/applelogo.png" alt="" /></span>
+                </div>
+                <div class="action-icon">
+                  <span><img src="./image/playstore.png" alt="" /></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="image-section">
+              <div class="mockup-image">
+                <div class="workspace-scene">
+                  <img src="./image/plan.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide style="width: 80%">
+          <div class="case-study-card">
+            <div class="content-section">
+              <div class="brand-header">
+                <div class="brand-logo">
+                  <img src="./image/pw.png" alt="" />
+                </div>
+                <h2 class="brand-title">Plan & Work</h2>
+              </div>
+              <p class="description">
+                The Plan&Work app allows our users to check in to
+                theirworkplace,receive detailed plans of their shifts and
+                trackother importantinformation such as work KPIs, statistics
+                andtheir earnings. Thisapp, when used with the Plan&Work
+                SaaSsolution, forms a full-package experience of streamlining
+                theplanning and tracking of workacross the organization.
+              </p>
+              <div class="technologies">
+                <div class="tech-label">Technologies :-</div>
+                <div class="tech-icons">
+                  <div class="tech-icon tech-flutter" style="--delay: 1">
+                    <span><img src="./image/technology1.png" alt="" /></span>
+                  </div>
+                  <div class="tech-icon tech-nodejs" style="--delay: 2">
+                    <span><img src="./image/technology2.png" alt="" /></span>
+                  </div>
+                  <div class="tech-icon tech-angular" style="--delay: 3">
+                    <span><img src="./image/technology3.png" alt="" /></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="actions">
+                <button class="view-case-btn">
+                  <span>●</span>VIEW CASE STUDY
+                </button>
+                <div class="action-icon share-icon">
+                  <span><img src="./image/applelogo.png" alt="" /></span>
+                </div>
+                <div class="action-icon">
+                  <span><img src="./image/playstore.png" alt="" /></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="image-section">
+              <div class="mockup-image">
+                <div class="workspace-scene">
+                  <img src="./image/plan.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide style="width: 80%">
+          <div class="case-study-card">
+            <div class="content-section">
+              <div class="brand-header">
+                <div class="brand-logo">
+                  <img src="./image/pw.png" alt="" />
+                </div>
+                <h2 class="brand-title">Plan & Work</h2>
+              </div>
+              <p class="description">
+                The Plan&Work app allows our users to check in to
+                theirworkplace,receive detailed plans of their shifts and
+                trackother importantinformation such as work KPIs, statistics
+                andtheir earnings. Thisapp, when used with the Plan&Work
+                SaaSsolution, forms a full-package experience of streamlining
+                theplanning and tracking of workacross the organization.
+              </p>
+              <div class="technologies">
+                <div class="tech-label">Technologies :-</div>
+                <div class="tech-icons">
+                  <div class="tech-icon tech-flutter" style="--delay: 1">
+                    <span><img src="./image/technology1.png" alt="" /></span>
+                  </div>
+                  <div class="tech-icon tech-nodejs" style="--delay: 2">
+                    <span><img src="./image/technology2.png" alt="" /></span>
+                  </div>
+                  <div class="tech-icon tech-angular" style="--delay: 3">
+                    <span><img src="./image/technology3.png" alt="" /></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="actions">
+                <button class="view-case-btn">
+                  <span>●</span>VIEW CASE STUDY
+                </button>
+                <div class="action-icon share-icon">
+                  <span><img src="./image/applelogo.png" alt="" /></span>
+                </div>
+                <div class="action-icon">
+                  <span><img src="./image/playstore.png" alt="" /></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="image-section">
+              <div class="mockup-image">
+                <div class="workspace-scene">
+                  <img src="./image/plan.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+
+    <!-- Technology -->
+    <section class="container technology-section" style="padding: 40px 0px">
+      <div data-aos="fade-up" data-aos-duration="2000">
+        <h4>TECHNOLOGY</h4>
+        <h2>The Backbone of Our Digital Success</h2>
+        <p>
+          Our experience with contemporary technology results in
+          solutionsthatpromote business growth and adjust to changing needs./p>
+        </p>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-column">
+          <div class="tech-card"><img src="./image/tech1.png" alt="PHP" /></div>
+          <div class="tech-card">
+            <img src="./image/tech2.png" alt="MySQL" />
+          </div>
+          <div class="tech-card">
+            <img src="./image/tech3.png" alt="Laravel" />
+          </div>
+        </div>
+        <div class="tech-column">
+          <div class="tech-card">
+            <img src="./image/tech4.png" alt="Swift" />
+          </div>
+          <div class="tech-card">
+            <img src="./image/tech5.png" alt="Angular" />
+          </div>
+          <div class="tech-card">
+            <img src="./image/tech6.png" alt="WordPress" />
+          </div>
+        </div>
+        <div class="tech-column">
+          <div class="tech-card">
+            <img src="./image/tech7.png" alt="MongoDB" />
+          </div>
+          <div class="tech-card">
+            <img src="./image/tech8.png" alt="Figma" />
+          </div>
+          <div class="tech-card">
+            <img src="./image/tech9.png" alt="Adobe XD" />
+          </div>
+        </div>
+        <div class="tech-column">
+          <div class="tech-card">
+            <img src="./image/tech10.png" alt="Photoshop" />
+          </div>
+          <div class="tech-card">
+            <img src="./image/tech11.png" alt="JavaScript" />
+          </div>
+          <div class="tech-card">
+            <img src="./image/tech12.png" alt="React" />
+          </div>
+        </div>
+        <div class="tech-column">
+          <div class="tech-card">
+            <img src="./image/tech13.png" alt="Node.js" />
+          </div>
+          <div class="tech-card">
+            <img src="./image/tech14.png" alt="Flutter" />
+          </div>
+          <div class="tech-card">
+            <img src="./image/tech15.png" alt="Kotlin" />
+          </div>
+        </div>
+        <div class="tech-column">
+          <div class="tech-card">
+            <img src="./image/tech16.png" alt="JMeter" />
+          </div>
+          <div class="tech-card">
+            <img src="./image/tech17.png" alt="Selenium" />
+          </div>
+          <div class="tech-card">
+            <img src="./image/tech18.png" alt="SQL Server" />
+          </div>
+        </div>
+        <div class="tech-column">
+          <div class="tech-card">
+            <img src="./image/tech19.png" alt="PostgreSQL" />
+          </div>
+          <div class="tech-card">
+            <img src="./image/tech20.png" alt="Trello" />
+          </div>
+          <div class="tech-card">
+            <img src="./image/tech18.png" alt="SQL Server" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+      <div class="particles" id="particles"></div>
+      <div class="container">
+        <div class="section-header">
+          <div class="section-title-small">TESTIMONIALS</div>
+          <h2 class="section-title-main">
+            Voices That Echo Our Commitment to Excellence
+          </h2>
+          <p class="section-subtitle">
+            Each of our testimonials proves our commitment to turning challenges
+            into measurable results that last.
+          </p>
+        </div>
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <div class="company-logo">
+                    <img src="./image/logo.png" alt="RUBEX Logo" />
+                  </div>
+                  <div class="testimonial-text">
+                    The Company Name Team is Simply Amazing. We've hired them
+                    because we needed help to develop a new front end for our
+                    app on our website and they've been doing an excellent job.
+                  </div>
+                  <div class="testimonial-author">
+                    <div class="author-name">Gatien Gillon</div>
+                    <div class="author-title">COO (RUBEX)</div>
+                  </div>
+                </div>
+                <div class="testimonial-image">
+                  <img src="./image/testimonial1.png" alt="Gatien Gillon" />
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <div class="company-logo">
+                    <img src="./image/logo.png" alt="TECHFLOW Logo" />
+                  </div>
+                  <div class="testimonial-text">
+                    Working with this team has been transformative for our
+                    business. Their expertise in digital solutions and
+                    commitment to quality has exceeded our expectations.
+                  </div>
+                  <div class="testimonial-author">
+                    <div class="author-name">Sarah Johnson</div>
+                    <div class="author-title">CTO (TECHFLOW)</div>
+                  </div>
+                </div>
+                <div class="testimonial-image">
+                  <img src="./image/testimonial1.png" alt="Sarah Johnson" />
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <div class="company-logo">
+                    <img src="./image/logo.png" alt="INNOVATE Logo" />
+                  </div>
+                  <div class="testimonial-text">
+                    Outstanding professional service from start to finish. The
+                    team's attention to detail and innovative approach helped us
+                    achieve our goals faster than expected.
+                  </div>
+                  <div class="testimonial-author">
+                    <div class="author-name">Michael Chen</div>
+                    <div class="author-title">FOUNDER (INNOVATE)</div>
+                  </div>
+                </div>
+                <div class="testimonial-image">
+                  <img src="./image/testimonial1.png" alt="Michael Chen" />
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <div class="company-logo">
+                    <img src="./image/logo.png" alt="GlobalTech Logo" />
+                  </div>
+                  <div class="testimonial-text">
+                    Exceptional service delivery and innovative solutions. The
+                    team's technical expertise and project management skills are
+                    truly world-class.
+                  </div>
+                  <div class="testimonial-author">
+                    <div class="author-name">Emily Rodriguez</div>
+                    <div class="author-title">VP (GLOBALTECH)</div>
+                  </div>
+                </div>
+                <div class="testimonial-image">
+                  <img src="./image/testimonial1.png" alt="Emily Rodriguez" />
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <div class="company-logo">
+                    <img src="./image/logo.png" alt="NEXUS Logo" />
+                  </div>
+                  <div class="testimonial-text">
+                    Professional excellence at its finest. Their dedication to
+                    delivering high-quality results within tight deadlines is
+                    remarkable.
+                  </div>
+                  <div class="testimonial-author">
+                    <div class="author-name">David Kim</div>
+                    <div class="author-title">CEO (NEXUS)</div>
+                  </div>
+                </div>
+                <div class="testimonial-image">
+                  <img src="./image/testimonial1.png" alt="David Kim" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="container faq">
+      <div>
+        <h4>FAQ</h4>
+        <h1>Frequently Asked Questions</h1>
+      </div>
+      <div class="faq-section">
+        <div class="faq-left">
+          <div class="accordion">
+            <span class="question-text"
+              >How can I start a Project with Softoin?</span
+            >
+            <button class="toggle-btn">+</button>
+          </div>
+          <div class="panel">
+            Contact Softoin with your project requirements for more information
+            on how to start a project. Our team will arrange an initial
+            consultation to understand your needs and visions. We shall provide
+            a tailored proposal, including timelines and costs. With approval,
+            we will set the Project in motion and begin yourself on the journey
+            to your solution.
+          </div>
+
+          <div class="accordion">
+            <span class="question-text"
+              >How does Softoin ensure Project Success?</span
+            >
+            <button class="toggle-btn">+</button>
+          </div>
+          <div class="panel">
+            Setting clear project milestones using a customer-oriented approach
+            and effective processes allows each Project to be completed
+            successfully. We take the time to understand your views and
+            objectively leverage all resources toward achieving the job within
+            periods that will satisfy your objectives.
+          </div>
+
+          <div class="accordion">
+            <span class="question-text"
+              >What is the Price of Developing a Website or an App?</span
+            >
+            <button class="toggle-btn">+</button>
+          </div>
+          <div class="panel">
+            The cost of building an app or website depends on what you need for
+            your project-like the features, design, and complexity. Simpler app
+            or websites are cheaper, while more significant projects usually
+            require a larger budget. At softoin, you'll find straightforward
+            pricing and solutions that perfectly match your goals and budget.
+          </div>
+
+          <div class="accordion">
+            <span class="question-text"
+              >Do you offer After-Launch Support Services?</span
+            >
+            <button class="toggle-btn">+</button>
+          </div>
+          <div class="panel">
+            With us at softoin, after-launch assistance is entirely secure. When
+            it comes to platform maintenance, we won't take any chances. Our
+            team of professionals will handle maintenance, bug fixes, updates,
+            and other improvements you may require.
+          </div>
+
+          <div class="accordion">
+            <span class="question-text"
+              >How does Softoin Choose App/Website Developers for your
+              Project?</span
+            >
+            <button class="toggle-btn">+</button>
+          </div>
+          <div class="panel">
+            We ensure that each developer working on your project has the
+            required skills and experience with the technologies you require.
+            Our developers at Softoin are not only experienced and dedicated to
+            their work but also generate the results you desire.
+          </div>
+        </div>
+
+        <div class="faq-right">
+          <div class="mockup-columns">
+            <div class="mockup-list scroll1">
+              <div class="mockup">
+                <div class=""><img src="./image/m1.webp" alt="" /></div>
+              </div>
+              <div class="mockup">
+                <div class=""><img src="./image/m2.webp" alt="" /></div>
+              </div>
+              <div class="mockup">
+                <div class=""><img src="./image/m3.webp" alt="" /></div>
+              </div>
+            </div>
+            <div class="mockup-list scroll2">
+              <div class="mockup">
+                <div class=""><img src="./image/m4.webp" alt="" /></div>
+              </div>
+              <div class="mockup">
+                <div class=""><img src="./image/m5.webp" alt="" /></div>
+              </div>
+              <div class="mockup">
+                <div class=""><img src="./image/m6.webp" alt="" /></div>
+              </div>
+            </div>
+            <div class="mockup-list scroll3">
+              <div class="mockup">
+                <div class=""><img src="./image/m7.webp" alt="" /></div>
+              </div>
+              <div class="mockup">
+                <div class=""><img src="./image/m8.webp" alt="" /></div>
+              </div>
+              <div class="mockup">
+                <div class=""><img src="./image/m9.webp" alt="" /></div>
+              </div>
+            </div>
+            <div class="mockup-list scroll4">
+              <div class="mockup">
+                <div class=""><img src="./image/m10.webp" alt="" /></div>
+              </div>
+              <div class="mockup">
+                <div class=""><img src="./image/m11.webp" alt="" /></div>
+              </div>
+              <div class="mockup">
+                <div class=""><img src="./image/m12.webp" alt="" /></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Industry Section -->
+    <section class="container">
+      <div class="industry">
+        <div class="industry-section">
+          <div>
+            <h2>Industry We Serve</h2>
+            <p>Augmenting Content & Creativity through Businesses</p>
+          </div>
+          <div class="industry-grid">
+            <div class="industry-column">
+              <div class="industry-card">
+                <img src="./image/i1.webp" alt="Manufacturing" />
+                <span>Manufacturing</span>
+              </div>
+              <div class="industry-card">
+                <img src="./image/i2.webp" alt="Education" />
+                <span>Education</span>
+              </div>
+            </div>
+            <div class="industry-column">
+              <div class="industry-card">
+                <img src="./image/i3.webp" alt="Medical" />
+                <span>Medical</span>
+              </div>
+              <div class="industry-card">
+                <img src="./image/i4.png" alt="Security" />
+                <span>Security</span>
+              </div>
+              <div class="industry-card">
+                <img src="./image/i5.webp" alt="Fashion" />
+                <span>Fashion</span>
+              </div>
+            </div>
+            <div class="industry-column">
+              <div class="industry-card">
+                <img src="./image/i6.webp" alt="Fitness" />
+                <span>Fitness</span>
+              </div>
+              <div class="industry-card">
+                <img src="./image/i7.webp" alt="Textile" />
+                <span>Textile</span>
+              </div>
+            </div>
+            <div class="industry-column">
+              <div class="industry-card">
+                <img src="./image/i8.webp" alt="Real Estate" />
+                <span>Real Estate</span>
+              </div>
+              <div class="industry-card">
+                <img src="./image/i9.png" alt="Gadgets Electronics" />
+                <span>Electronics</span>
+              </div>
+              <div class="industry-card">
+                <img src="./image/i10.webp" alt="Dance" />
+                <span>Dance</span>
+              </div>
+            </div>
+            <div class="industry-column">
+              <div class="industry-card">
+                <img src="./image/i11.webp" alt="Jewellery" />
+                <span>Jewellery</span>
+              </div>
+              <div class="industry-card">
+                <img src="./image/i12.webp" alt="Consulting" />
+                <span>Consulting</span>
+              </div>
+            </div>
+            <div class="industry-column">
+              <div class="industry-card">
+                <img src="./image/i13.webp" alt="Media" />
+                <span>Media</span>
+              </div>
+              <div class="industry-card">
+                <img src="./image/i14.webp" alt="Beauty" />
+                <span>Beauty</span>
+              </div>
+              <div class="industry-card">
+                <img src="./image/i15.webp" alt="FMCG" />
+                <span>FMCG</span>
+              </div>
+            </div>
+            <div class="industry-column">
+              <div class="industry-card">
+                <img src="./image/i16.webp" alt="Home Decor" />
+                <span>Home Decor</span>
+              </div>
+              <div class="industry-card">
+                <img src="./image/i17.webp" alt="Government" />
+                <span>Government</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Circle Section -->
+    <section class="section">
+      <div class="container">
+        <div class="header-text">
+          <div class="section-title">
+            Our Tech Offerings – Tailored to<br />
+            Your Time Zone and Business Needs
+          </div>
+          <div class="nav-buttons">
+            <button class="nav-button" onclick="prevSlide()">
+              <span>‹</span>
+            </button>
+            <button class="nav-button" onclick="nextSlide()">
+              <span>›</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="carousel-wrapper">
+          <div class="carousel" id="carousel">
+            <!-- Slide 1: Build-To-Scale Agile Teams -->
+            <div class="slide active">
+              <div class="text-content">
+                <h3>Build-To-Scale Agile Teams</h3>
+                <p>
+                  Augment your agile development team effortlessly by hiring
+                  experienced software engineers and programmers to accelerate
+                  your operations.
+                </p>
+                <div style="margin-top: 30px">
+                  <div
+                    style="
+                      width: 500px;
+                      border-radius: 16px;
+                      display: inline-block;
+                    "
+                  >
+                    <img
+                      style="width: 100%"
+                      src="./image/hmagl_pro 1.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2: Staff Augmentation -->
+            <div class="slide">
+              <div class="text-content">
+                <h2>Staff Augmentation</h2>
+                <p>
+                  Scale your team with pre-vetted developers and IT staff
+                  augmentation, leveraging the latest technologies and
+                  round-the-clock availability for your project needs.
+                </p>
+
+                <div class="clocks-container">
+                  <div class="clock-card" style="--delay: 0.1s">
+                    <canvas
+                      class="clock-canvas"
+                      id="uaeClock"
+                      width="120"
+                      height="120"
+                    ></canvas>
+                    <h4>UAE</h4>
+                    <p id="uaeTime"></p>
+                  </div>
+                  <div class="clock-card" style="--delay: 0.2s">
+                    <canvas
+                      class="clock-canvas"
+                      id="usaClock"
+                      width="120"
+                      height="120"
+                    ></canvas>
+                    <h4>USA</h4>
+                    <p id="usaTime"></p>
+                  </div>
+                  <div class="clock-card" style="--delay: 0.3s">
+                    <canvas
+                      class="clock-canvas"
+                      id="ukClock"
+                      width="120"
+                      height="120"
+                    ></canvas>
+                    <h4>UK</h4>
+                    <p id="ukTime"></p>
+                  </div>
+                  <div class="clock-card" style="--delay: 0.4s">
+                    <canvas
+                      class="clock-canvas"
+                      id="sgClock"
+                      width="120"
+                      height="120"
+                    ></canvas>
+                    <h4>SINGAPORE</h4>
+                    <p id="sgTime"></p>
+                  </div>
+                  <div class="clock-card" style="--delay: 0.5s">
+                    <canvas
+                      class="clock-canvas"
+                      id="ausClock"
+                      width="120"
+                      height="120"
+                    ></canvas>
+                    <h4>AUSTRALIA</h4>
+                    <p id="ausTime"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3: Offshore Development Team -->
+            <div class="slide">
+              <div class="text-content">
+                <h2>Build Your Offshore Development Team</h2>
+                <p>
+                  At Aperturus, setting up a dedicated offshore software
+                  development team is quick and hassle-free, completed in just
+                  four simple steps.
+                </p>
+
+                <div class="process-steps">
+                  <div class="step blue" style="--delay: 0.1s">
+                    <div
+                      style="
+                        width: 32px;
+                        height: 32px;
+                        background: rgba(255, 255, 255, 0.2);
+                        border-radius: 8px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 12px;
+                      "
+                    >
+                      <span style="font-size: 18px">📋</span>
+                    </div>
+                    <h4>Share Your Requirements</h4>
+                    <p>Define your project needs and skills required</p>
+                  </div>
+
+                  <div class="step" style="--delay: 0.2s">
+                    <div
+                      style="
+                        width: 32px;
+                        height: 32px;
+                        background: rgba(79, 70, 229, 0.2);
+                        border-radius: 8px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 12px;
+                      "
+                    >
+                      <span style="font-size: 18px">👥</span>
+                    </div>
+                    <h4>Get Vetted Profiles</h4>
+                    <p>Access a curated list of top talent</p>
+                  </div>
+
+                  <div class="step blue" style="--delay: 0.3s">
+                    <div
+                      style="
+                        width: 32px;
+                        height: 32px;
+                        background: rgba(255, 255, 255, 0.2);
+                        border-radius: 8px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 12px;
+                      "
+                    >
+                      <span style="font-size: 18px">💬</span>
+                    </div>
+                    <h4>Conduct Interviews</h4>
+                    <p>Evaluate and select the right candidates</p>
+                  </div>
+
+                  <div class="step" style="--delay: 0.4s">
+                    <div
+                      style="
+                        width: 32px;
+                        height: 32px;
+                        background: rgba(79, 70, 229, 0.2);
+                        border-radius: 8px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 12px;
+                      "
+                    >
+                      <span style="font-size: 18px">🚀</span>
+                    </div>
+                    <h4>Hire & Get Started</h4>
+                    <p>Onboard your chosen developers and start building</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel Indicators -->
+          <div class="carousel-indicators">
+            <div class="indicator active" onclick="goToSlide(0)"></div>
+            <div class="indicator" onclick="goToSlide(1)"></div>
+            <div class="indicator" onclick="goToSlide(2)"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="container info-section">
+      <div class="particles" id="particles"></div>
+
+      <div class="info">
+        <div class="info-content">
+          <h1>Not Just Expertise</h1>
+          <p class="tagline">A Partnership for Your Growth</p>
+          <p class="tagline">Beyond Solutions, Building Success Together</p>
+          <p class="tagline">Collaboration That Delivers Growth</p>
+          <p class="tagline">Together Towards Excellence</p>
+          <a href="#" class="cta-button">
+            Let's Start
+            <span class="arrow">→</span>
+          </a>
+        </div>
+        <div class="info-visual">
+          <div class="visual-circle"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="container" style="padding: 40px 0px">
+      <div class="contact contact-section">
+        <div class="contact-left">
+          <h3>
+            Partner with tech catalysts who<br />
+            transform ideas into impact.
+          </h3>
+          <br />
+          <p>Book your free consultation with us.</p>
+          <h1 class="gradient-text">Let's Talk!</h1>
+
+          <div class="office-info">
+            <h5 id="country-name">UNITED ARAB EMIRATES</h5>
+            <div class="address-inline">
+              <img
+                id="country-icon"
+                src="./image/icon.webp"
+                alt="Office Icon"
+              />
+              <p id="country-address">
+                One Central, The Offices 3, Level 3,<br />
+                DWTC, Sheikh Zayed Road, Dubai,<br />
+                United Arab Emirates<br />
+                <strong>+971507821690</strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="country-selector">
+            <button class="country active" data-country="uae">
+              UAE <img src="https://flagcdn.com/16x12/ae.png" alt="UAE" />
+            </button>
+            <button class="country" data-country="usa">
+              USA <img src="https://flagcdn.com/16x12/us.png" alt="USA" />
+            </button>
+            <button class="country" data-country="uk">
+              UK <img src="https://flagcdn.com/16x12/gb.png" alt="UK" />
+            </button>
+            <button class="country" data-country="india">
+              INDIA <img src="https://flagcdn.com/16x12/in.png" alt="India" />
+            </button>
+          </div>
+        </div>
+        <div class="contact-right fade-in-down">
+          <h3>Speak With Our Experts</h3>
+          <form id="contactForm">
+            <input
+              type="text"
+              name="fullname"
+              placeholder="Full Name"
+              required
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="+91 Mobile Number"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Business Email"
+              required
+            />
+            <select name="launch" required>
+              <option value="">When do you want to launch a solution?</option>
+              <option value="immediately">Immediately</option>
+              <option value="1-3months">1-3 Months</option>
+              <option value="3-6months">3-6 Months</option>
+            </select>
+            <textarea
+              name="project"
+              rows="4"
+              placeholder="About Project"
+              required
+            ></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="container">
+      <div class="particles" id="particles"></div>
+      <div class="footer-container">
+        <div class="footer-left">
+          <img src="./image/companylogo.png" alt="Company Logo" />
+          <p>Ready to transform your business digitally?</p>
+          <a href="#" class="contact-btn">Contact Now!</a>
+
+          <div class="social-icons">
+            <a href="#" title="Facebook">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z'/%3E%3C/svg%3E"
+                alt="Facebook"
+              />
+            </a>
+            <a href="#" title="Twitter">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z'/%3E%3C/svg%3E"
+                alt="Twitter"
+              />
+            </a>
+            <a href="#" title="LinkedIn">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z'/%3E%3C/svg%3E"
+                alt="LinkedIn"
+              />
+            </a>
+            <a href="#" title="YouTube">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z'/%3E%3C/svg%3E"
+                alt="YouTube"
+              />
+            </a>
+            <a href="#" title="Instagram">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z'/%3E%3C/svg%3E"
+                alt="Instagram"
+              />
+            </a>
+          </div>
+
+          <div class="sales-info">
+            For sales enquiries:<br />
+            <a href="mailto:sales@softoin.com">sales@softoin.com</a>
+          </div>
+
+          <div class="DMCA">
+            <img src="./image/DMCA.webp" alt="DMCA Protection" />
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#">App Development Services</a></li>
+            <li><a href="#">AI Development Services</a></li>
+            <li><a href="#">Software Development Services</a></li>
+            <li><a href="#">Web App Development</a></li>
+            <li><a href="#">Hire Software Developers</a></li>
+            <li><a href="#">Hire App Developers</a></li>
+            <li><a href="#">Digital Marketing Services</a></li>
+            <li><a href="#">Mobile App Development Dubai</a></li>
+            <li><a href="#">Mobile App Development KSA</a></li>
+            <li><a href="#">Mobile App Development UK</a></li>
+            <li><a href="#">Mobile App Development Australia</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Expertise</h3>
+          <ul>
+            <li><a href="#">Ecommerce App Development</a></li>
+            <li><a href="#">Blockchain App Development</a></li>
+            <li><a href="#">Fintech App Development</a></li>
+            <li><a href="#">AR / VR App Development</a></li>
+            <li><a href="#">Food Delivery App Development</a></li>
+            <li><a href="#">Grocery Delivery App Development</a></li>
+            <li><a href="#">Taxi Booking App Development</a></li>
+            <li><a href="#">Fitness App Development</a></li>
+            <li><a href="#">Sports Betting Development</a></li>
+            <li><a href="#">Healthcare App Development</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2025 Softoin. All Rights Reserved</span>
+        <div>
+          <a href="#">Sitemap</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/Home.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/script1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script>
+      const timelineData = [
+        {
+          number: "1.png",
+          title: "AI Development",
+          text: "Reimagine your business with AI Technology. We provide innovative solutions that make work easier and boost production and profitability.",
+          images: ["ai.png", "ai2.png"],
+        },
+        {
+          number: "2.png",
+          title: "App Development",
+          text: "We create scalable mobile and web apps tailored to your business needs with modern technologies.",
+          images: ["ai.png", "ai2.png"],
+        },
+        {
+          number: "3.png",
+          title: "Web Development",
+          text: "Building responsive, fast, and secure websites with the latest frameworks.",
+          images: ["ai.png", "ai2.png"],
+        },
+        {
+          number: "4.png",
+          title: "E-commerce Solution",
+          text: "Reimagine your business with AI Technology. We provide innovative solutions that make work easier and boost production and profitability.",
+          images: ["ai.png", "ai2.png"],
+        },
+        {
+          number: "5.png",
+          title: "UI UX Developement",
+          text: "We create scalable mobile and web apps tailored to your business needs with modern technologies.",
+          images: ["ai.png", "ai2.png"],
+        },
+        {
+          number: "6.png",
+          title: "Chatbot Development",
+          text: "Building responsive, fast, and secure websites with the latest frameworks.",
+          images: ["ai.png", "ai2.png"],
+        },
+        {
+          number: "7.png",
+          title: "Cloud Development",
+          text: "Reimagine your business with AI Technology. We provide innovative solutions that make work easier and boost production and profitability.",
+          images: ["ai.png", "ai2.png"],
+        },
+        {
+          number: "8.png",
+          title: "Software Development",
+          text: "We create scalable mobile and web apps tailored to your business needs with modern technologies.",
+          images: ["ai.png", "ai2.png"],
+        },
+        {
+          number: "9.png",
+          title: "ioT Development",
+          text: "Building responsive, fast, and secure websites with the latest frameworks.",
+          images: ["ai.png", "ai2.png"],
+        },
+      ];
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          margin: 30,
+          nav: true,
+          // loop: true,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          autoplayHoverPause: true,
+          responsive: {
+            0: { items: 1 },
+            600: { items: 2 },
+            1000: { items: 3 },
+          },
+        });
+      });
+    </script>
+
+    <script>
+      $(".phones-slider").owlCarousel({
+        loop: true,
+        margin: 20,
+        autoplay: true,
+        autoplayTimeout: 2500,
+        autoplayHoverPause: true,
+        smartSpeed: 800,
+        dots: true,
+        dotsEach: 1,
+        nav: false,
+        responsive: {
+          0: { items: 1 },
+          576: { items: 2 },
+          768: { items: 3 },
+          1024: { items: 4 },
+          1200: { items: 5 },
+        },
+      });
+    </script>
+
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        loop: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        // autoplay: {
+        //   delay: 4000,
+        //   disableOnInteraction: false,
+        // },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 25,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1200: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
