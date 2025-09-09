@@ -732,6 +732,10 @@ body {
   width: 100%;
 }
 
+.parent-container {
+  display: flex;
+}
+
 .circle-bg {
   height: 700px !important;
 }

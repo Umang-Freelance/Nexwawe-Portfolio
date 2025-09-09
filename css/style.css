@@ -1269,6 +1269,10 @@
     padding: 40px 15px;
   }
 
+  .slide {
+    background: none;
+  }
+
   .header-text {
     flex-direction: column;
     text-align: center;
@@ -1529,8 +1533,8 @@
 
 .cta-button {
   display: inline-block;
-  margin-top: 40px;
-  padding: 18px 40px;
+  /* margin-top: 40px; */
+  padding: 18px 0px;
   font-size: 1.2rem;
   font-weight: 600;
   color: #fff;
@@ -1605,7 +1609,7 @@
 
 @media (max-width: 900px) {
   .info {
-    flex-direction: column;
+    /* flex-direction: column; */
     text-align: center;
     gap: 50px;
   }
@@ -1627,6 +1631,10 @@
   .cta-button {
     padding: 15px 30px;
     font-size: 1.1rem;
+  }
+
+  .info-section {
+    background: none;
   }
 }
 
@@ -2490,7 +2498,7 @@ footer::after {
 @media (max-width: 768px) {
   .info {
     grid-template-columns: 1fr;
-    padding: 40px;
+    /* padding: 40px; */
   }
 
   .info-content h1 {
@@ -2502,7 +2510,7 @@ footer::after {
 @media (max-width: 1024px) {
   .info {
     grid-template-columns: 1fr 1fr;
-    padding: 50px;
+    /* padding: 50px; */
   }
 
   .info-content h1 {
@@ -2513,7 +2521,7 @@ footer::after {
 @media (min-width: 1224px) {
   .info {
     grid-template-columns: 1fr 1fr;
-    padding: 40px;
+    /* padding: 40px; */
   }
 
   .info-content h1 {

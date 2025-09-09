@@ -25,22 +25,22 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Award Carousel JS
-const container = document.querySelector(".carousel-container");
-const slides = document.querySelectorAll(".award-badge");
+const awardContainer = document.querySelector(".carousel-container");
+const awardSlides = document.querySelectorAll(".award-badge");
 const dotsContainer = document.querySelector(".carousel-dots");
 
 let scrollSpeed = 0.5;
 let position = 0;
 let isManual = false;
 
-container.innerHTML += container.innerHTML;
-const totalSlides = slides.length;
+awardContainer.innerHTML += awardContainer.innerHTML;
+const totalSlides = awardSlides.length;
 
 for (let i = 0; i < totalSlides; i++) {
   const dot = document.createElement("span");
   dot.classList.add("dot");
   if (i === 0) dot.classList.add("active");
-  dot.addEventListener("click", () => showSlide(i));
+  dot.addEventListener("click", () => showAwardSlide(i));
   dotsContainer.appendChild(dot);
 }
 const dots = document.querySelectorAll(".dot");
@@ -48,20 +48,20 @@ const dots = document.querySelectorAll(".dot");
 function loop() {
   if (!isManual) {
     position -= scrollSpeed;
-    if (Math.abs(position) >= container.scrollWidth / 2) {
+    if (Math.abs(position) >= awardContainer.scrollWidth / 2) {
       position = 0;
     }
-    container.style.transform = `translateX(${position}px)`;
+    awardContainer.style.transform = `translateX(${position}px)`;
   }
   requestAnimationFrame(loop);
 }
 loop();
 
-function showSlide(i) {
+function showAwardSlide(i) {
   isManual = true;
   const slideWidth = document.querySelector(".award-badge").offsetWidth;
   position = -(i * slideWidth);
-  container.style.transform = `translateX(${position}px)`;
+  awardContainer.style.transform = `translateX(${position}px)`;
   dots.forEach((dot) => dot.classList.remove("active"));
   dots[i].classList.add("active");
   setTimeout(() => {
@@ -142,7 +142,9 @@ function animateNumberImg() {
   setTimeout(() => numberImg.classList.remove("animate"), 400);
 }
 
-numberImg.src = "./image/" + data.number;
+// Fix: Use the first timeline data item
+const firstTimelineData = timelineData[0];
+numberImg.src = "./image/" + firstTimelineData.number;
 animateNumberImg();
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -214,15 +216,15 @@ window.addEventListener("scroll", () => {
 
 // Watch Slider JS
 let currentSlide = 0;
-const slides = document.querySelectorAll(".slide");
+const watchSlides = document.querySelectorAll(".slide");
 const indicators = document.querySelectorAll(".indicator");
 const carousel = document.getElementById("carousel");
 
 function showSlide(index) {
-  slides.forEach((slide) => slide.classList.remove("active"));
+  watchSlides.forEach((slide) => slide.classList.remove("active"));
   indicators.forEach((indicator) => indicator.classList.remove("active"));
 
-  slides[index].classList.add("active");
+  watchSlides[index].classList.add("active");
   indicators[index].classList.add("active");
 
   carousel.style.transform = `translateX(-${index * 100}%)`;
@@ -230,12 +232,12 @@ function showSlide(index) {
 }
 
 function nextSlide() {
-  currentSlide = (currentSlide + 1) % slides.length;
+  currentSlide = (currentSlide + 1) % watchSlides.length;
   showSlide(currentSlide);
 }
 
 function prevSlide() {
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  currentSlide = (currentSlide - 1 + watchSlides.length) % watchSlides.length;
   showSlide(currentSlide);
 }
 
@@ -424,25 +426,25 @@ section.addEventListener("mouseleave", startAutoPlay);
 
 startAutoPlay();
 
-const observerOptions = {
+const clockObserverOptions = {
   threshold: 0.1,
   rootMargin: "0px 0px -50px 0px",
 };
 
-const observer = new IntersectionObserver((entries) => {
+const clockObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.style.animationPlayState = "running";
     }
   });
-}, observerOptions);
+}, clockObserverOptions);
 
 document.querySelectorAll(".clock-card, .step").forEach((el) => {
-  observer.observe(el);
+  clockObserver.observe(el);
 });
 
 // NOT JUST EXPERTISE JS
-function createParticles() {
+function createInfoParticles() {
   const particlesContainer = document.getElementById("particles");
   const particleCount = 20;
 
@@ -456,7 +458,7 @@ function createParticles() {
   }
 }
 
-createParticles();
+createInfoParticles();
 
 document.addEventListener("mousemove", (e) => {
   const cursor = document.querySelector(".info-section");
@@ -468,7 +470,7 @@ document.addEventListener("mousemove", (e) => {
                 hsl(${280 + y * 40}, 60%, ${50 + x * 20}%) 100%)`;
 });
 
-const observer = new IntersectionObserver((entries) => {
+const infoObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.style.animationPlayState = "running";
@@ -477,11 +479,11 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 document.querySelectorAll(".tagline, .cta-button").forEach((el) => {
-  observer.observe(el);
+  infoObserver.observe(el);
 });
 
 // Footer JS
-function createParticles() {
+function createFooterParticles() {
   const particlesContainer = document.getElementById("particles");
   const particleCount = 15;
 
@@ -496,26 +498,26 @@ function createParticles() {
   }
 }
 
-createParticles();
+createFooterParticles();
 
-const observerOptions = {
+const footerObserverOptions = {
   threshold: 0.1,
   rootMargin: "0px 0px -50px 0px",
 };
 
-const observer = new IntersectionObserver((entries) => {
+const footerObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.style.animationPlayState = "running";
       entry.target.classList.add("animate");
     }
   });
-}, observerOptions);
+}, footerObserverOptions);
 
 document
   .querySelectorAll(".footer-left, .footer-col, .footer-bottom")
   .forEach((el) => {
-    observer.observe(el);
+    footerObserver.observe(el);
   });
 
 function revealOnScroll() {
@@ -617,7 +619,7 @@ style.textContent = `
 document.head.appendChild(style);
 
 const footerElement = document.querySelector("footer");
-const footerObserver = new IntersectionObserver((entries) => {
+const footerElementObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       document.documentElement.style.setProperty(
@@ -633,7 +635,7 @@ const footerObserver = new IntersectionObserver((entries) => {
   });
 });
 
-footerObserver.observe(footerElement);
+footerElementObserver.observe(footerElement);
 
 document.addEventListener("DOMContentLoaded", function () {
   revealOnScroll();
@@ -646,7 +648,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Industry We Serve JS
 document.addEventListener("DOMContentLoaded", function () {
   // Add animation class when section is in view
-  const observer = new IntersectionObserver(
+  const industryObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -659,7 +661,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   );
 
-  observer.observe(document.querySelector(".industry-section"));
+  industryObserver.observe(document.querySelector(".industry-section"));
 
   // Add touch swipe support for mobile
   let startX = null;
@@ -809,7 +811,7 @@ window.addEventListener("scroll", () => {
 
 // Testimonials JS
 // Create floating particles
-function createParticles() {
+function createTestimonialParticles() {
   const particlesContainer = document.getElementById("particles");
   const particleCount = 20;
 
@@ -825,10 +827,10 @@ function createParticles() {
 }
 
 // Initialize particles
-createParticles();
+createTestimonialParticles();
 
 // Initialize Swiper
-const swiper = new Swiper(".mySwiper", {
+const testimonialSwiper = new Swiper(".mySwiper", {
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
@@ -926,29 +928,29 @@ const swiper = new Swiper(".mySwiper", {
 });
 
 // Intersection Observer for scroll animations
-const observerOptions = {
+const testimonialObserverOptions = {
   threshold: 0.2,
   rootMargin: "0px 0px -100px 0px",
 };
 
-const observer = new IntersectionObserver((entries) => {
+const testimonialObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("animate");
       // Start autoplay when section is visible
       if (entry.target.classList.contains("testimonials-section")) {
-        swiper.autoplay.start();
+        testimonialSwiper.autoplay.start();
       }
     } else {
       // Pause autoplay when section is not visible
       if (entry.target.classList.contains("testimonials-section")) {
-        swiper.autoplay.stop();
+        testimonialSwiper.autoplay.stop();
       }
     }
   });
-}, observerOptions);
+}, testimonialObserverOptions);
 
-observer.observe(document.querySelector(".testimonials-section"));
+testimonialObserver.observe(document.querySelector(".testimonials-section"));
 
 // Enhanced card hover effects
 document.querySelectorAll(".testimonial-card").forEach((card) => {
@@ -958,7 +960,7 @@ document.querySelectorAll(".testimonial-card").forEach((card) => {
     clearTimeout(hoverTimeout);
 
     // Pause autoplay on hover
-    swiper.autoplay.stop();
+    testimonialSwiper.autoplay.stop();
 
     // Add glow effect
     this.style.boxShadow =
@@ -983,7 +985,7 @@ document.querySelectorAll(".testimonial-card").forEach((card) => {
   card.addEventListener("mouseleave", function () {
     // Resume autoplay after delay
     hoverTimeout = setTimeout(() => {
-      swiper.autoplay.start();
+      testimonialSwiper.autoplay.start();
     }, 1000);
 
     // Reset styles
@@ -1022,9 +1024,9 @@ function handleSwipeGesture() {
 
   if (Math.abs(swipeDistance) > swipeThreshold) {
     if (swipeDistance > 0) {
-      swiper.slidePrev();
+      testimonialSwiper.slidePrev();
     } else {
-      swiper.slideNext();
+      testimonialSwiper.slideNext();
     }
   }
 }
@@ -1032,9 +1034,9 @@ function handleSwipeGesture() {
 // Keyboard navigation
 document.addEventListener("keydown", function (event) {
   if (event.key === "ArrowLeft") {
-    swiper.slidePrev();
+    testimonialSwiper.slidePrev();
   } else if (event.key === "ArrowRight") {
-    swiper.slideNext();
+    testimonialSwiper.slideNext();
   }
 });
 
@@ -1043,7 +1045,7 @@ let resizeTimeout;
 window.addEventListener("resize", function () {
   clearTimeout(resizeTimeout);
   resizeTimeout = setTimeout(() => {
-    swiper.update();
+    testimonialSwiper.update();
   }, 250);
 });
 
@@ -1135,7 +1137,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Auto-start slideshow
   setTimeout(() => {
-    swiper.autoplay.start();
+    testimonialSwiper.autoplay.start();
   }, 2000);
 });
 
@@ -1167,7 +1169,7 @@ progressBar.style.cssText = `
 document.body.appendChild(progressBar);
 
 // Update progress on slide change
-swiper.on("slideChange", function () {
-  const progress = ((swiper.realIndex + 1) / swiper.slides.length) * 100;
+testimonialSwiper.on("slideChange", function () {
+  const progress = ((testimonialSwiper.realIndex + 1) / testimonialSwiper.slides.length) * 100;
   progressBar.style.width = progress + "%";
 });
