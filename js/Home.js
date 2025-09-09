@@ -1,3 +1,13 @@
+// Header Bg Blur
+window.addEventListener("scroll", () => {
+  const header = document.querySelector(".header");
+  if (window.scrollY > 50) {
+    header.classList.add("blur");
+  } else {
+    header.classList.remove("blur");
+  }
+});
+
 // Auto Write Js
 document.addEventListener("DOMContentLoaded", function () {
   new Typed("#typed-text", {

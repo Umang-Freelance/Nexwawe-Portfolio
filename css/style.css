@@ -417,6 +417,10 @@
   width: 100%;
   margin: 0 15px;
   position: relative;
+  background-image: url(../image/bg3.webp);
+  background-size: cover;
+  opacity: 1;
+  object-fit: cover;
   overflow: hidden;
 }
 
@@ -891,7 +895,7 @@
 }
 
 .section-title {
-  font-size: clamp(24px, 4vw, 48px);
+  font-size: clamp(24px, 4vw, 36px);
   font-weight: 800;
   background-clip: text;
   line-height: 1.2;
@@ -971,6 +975,9 @@
   position: relative;
   opacity: 0;
   animation: slideIn 0.8s ease-out forwards;
+  background-image: url(../image/watch-bg.png);
+  background-size: cover;
+  object-fit: cover;
 }
 
 .slide.active {
@@ -978,7 +985,7 @@
 }
 
 .text-content {
-  backdrop-filter: blur(20px);
+  /* backdrop-filter: blur(20px); */
   border-radius: 20px;
   position: relative;
   overflow: hidden;
@@ -1223,7 +1230,7 @@
     transform: translateX(50px);
   }
   to {
-    opacity: 1;
+    opacity: 0.5;
     transform: translateX(0);
   }
 }
