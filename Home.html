@@ -53,20 +53,331 @@
     <title>Document</title>
   </head>
   <body style="margin: 0px" class="page">
-      <!-- <div class="bg-fixed" aria-hidden="true">
+    <!-- <div class="bg-fixed" aria-hidden="true">
         <div class="blob a"></div>
         <div class="blob b"></div>
         <div class="blob c"></div>
       </div> -->
+
+    <!-- Web load pop up -->
+    <div class="popup-overlay">
+      <div class="popup-container">
+        <button class="close-btn" onclick="closePopup()">&times;</button>
+        <div class="popup-content">
+          <div class="left-section">
+            <span class="hand-emoji">👋</span>
+            <h1 class="main-title">Hey, Wait a Second!</h1>
+            <p class="subtitle">
+              Before you leave, let our experts help you with a free:
+            </p>
+
+            <ul class="features-list pl-0">
+              <li>Custom Development Roadmap</li>
+              <li>Budget Estimation</li>
+              <li>Time-To-Market Projection</li>
+            </ul>
+          </div>
+
+          <div class="right-section">
+            <form class="form-container" onsubmit="submitForm(event)">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-input"
+                  placeholder="Full Name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-input"
+                  placeholder="Business Email"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="tel"
+                  class="form-input"
+                  placeholder="Contact Number"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <textarea
+                  class="form-input form-textarea"
+                  placeholder="Describe Your Project/Idea in Brief"
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="submit-btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Header -->
     <header class="container header">
       <nav class="nav-container">
-        <div class="logo"><img src="./image/companylogo.png" alt="" /></div>
+        <div class="logo"><img src="./image/logo.webp" alt="" /></div>
         <ul class="nav-menu m-0 p-0" id="navMenu">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About Us</a></li>
-          <li class="has-dropdown"><a href="#services">Services</a></li>
-          <li><a href="#solutions">Solutions</a></li>
+          <li class="has-dropdown">
+            <a href="#services">Services</a>
+            <ul>
+              <li>
+                <div class="container services-wrapper">
+                  <div class="services-left">
+                    <span class="service-head">SERVICES THAT WE PROVIDE</span>
+                    <div class="services-grid">
+                      <div class="service-item">
+                        <div class="service-icon blue">💻</div>
+                        <div class="service-content">
+                          <span>Software Development</span>
+                          <p>Understand user needs and habits.</p>
+                        </div>
+                      </div>
+
+                      <div class="service-item">
+                        <div class="service-icon teal">📱</div>
+                        <div class="service-content">
+                          <span>Mobile App Development</span>
+                          <p>Mobile app user trend analysis</p>
+                        </div>
+                      </div>
+
+                      <div class="service-item">
+                        <div class="service-icon purple">🌐</div>
+                        <div class="service-content">
+                          <span>Web App Development</span>
+                          <p>Creating dynamic web applications.</p>
+                        </div>
+                      </div>
+
+                      <div class="service-item">
+                        <div class="service-icon orange">⛓️</div>
+                        <div class="service-content">
+                          <span>Blockchain Development Company</span>
+                          <p>Creating Blockchain Apps.</p>
+                        </div>
+                      </div>
+
+                      <div class="service-item">
+                        <div class="service-icon green">💰</div>
+                        <div class="service-content">
+                          <span>Cryptocurrency Development</span>
+                          <p>Creating Crypto Web & Apps</p>
+                        </div>
+                      </div>
+
+                      <div class="service-item">
+                        <div class="service-icon pink">🚀</div>
+                        <div class="service-content">
+                          <span>MVP Development</span>
+                          <p>Build MVP Development</p>
+                        </div>
+                      </div>
+
+                      <div class="service-item">
+                        <div class="service-icon cyan">🏢</div>
+                        <div class="service-content">
+                          <span>Enterprise Software Development</span>
+                          <p>Measure B2B Scope</p>
+                        </div>
+                      </div>
+
+                      <div class="service-item">
+                        <div class="service-icon indigo">🎨</div>
+                        <div class="service-content">
+                          <span>UX/UI Designing</span>
+                          <p>Creating User centric design</p>
+                        </div>
+                      </div>
+
+                      <div class="service-item">
+                        <div class="service-icon blue">🤖</div>
+                        <div class="service-content">
+                          <span>AI Development Services</span>
+                          <p>Implementing AI in softwares</p>
+                        </div>
+                      </div>
+
+                      <div class="service-item">
+                        <div class="service-icon teal">👥</div>
+                        <div class="service-content">
+                          <span>Hire Software Developers</span>
+                          <p>Hire Top Talent as per need</p>
+                        </div>
+                      </div>
+
+                      <div class="service-item">
+                        <div class="service-icon purple">📊</div>
+                        <div class="service-content">
+                          <span>Digital Marketing</span>
+                          <p>Boost brand awareness & conversions</p>
+                        </div>
+                      </div>
+
+                      <div class="service-item">
+                        <div class="service-icon orange">⚡</div>
+                        <div class="service-content">
+                          <span>IT Staff Augmentation</span>
+                          <p>Flexible hiring to scale faster</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="services-right">
+                    <h5 style="color: white">EGUIDE</h5>
+                    <div class="eguide-box">
+                      <img
+                        src="./image/servicemenu.png"
+                        alt="Ebook"
+                        class="eguide-img"
+                      />
+                      <div class="eguide-info">
+                        <strong>E Guide</strong>
+                        <h5>
+                          App Monetization Strategies: How to Make Money From an
+                          App?
+                        </h5>
+                        <p class="eguide-date mb-0">Jun 22, 2025</p>
+                        <a href="#" class="download-btn">Download now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="has-dropdownTwo">
+            <a href="#solutions">Solutions</a>
+            <div class="solutions">
+              <div class="solutions-container">
+                <div class="solutions-content">
+                  <!-- Industries Section -->
+                  <div class="solutions-section">
+                    <h3 class="solutions-title">INDUSTRIES</h3>
+                    <div class="solutions-grid">
+                      <div class="solutions-column">
+                        <ul>
+                          <li>
+                            <i class="fas fa-graduation-cap"></i> Education
+                          </li>
+                          <li><i class="fas fa-truck"></i> Logistics</li>
+                          <li><i class="fas fa-dollar-sign"></i> Finance</li>
+                          <li>
+                            <i class="fas fa-shopping-cart"></i> Ecommerce
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="solutions-column">
+                        <ul>
+                          <li><i class="fas fa-dumbbell"></i> Fitness</li>
+                          <li>
+                            <i class="fas fa-comments"></i> Dating App
+                            Development
+                          </li>
+                          <li>
+                            <i class="fas fa-gamepad"></i> Game Development
+                          </li>
+                          <li><i class="fas fa-home"></i> Real Estate</li>
+                        </ul>
+                      </div>
+                      <div class="solutions-column">
+                        <ul>
+                          <li><i class="fas fa-heartbeat"></i> Healthcare</li>
+                          <li>
+                            <i class="fas fa-users"></i> Social Networking
+                          </li>
+                          <li><i class="fas fa-running"></i> Sports Betting</li>
+                          <li><i class="fas fa-vr-cardboard"></i> AR/VR</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- On Demand Apps Section -->
+                  <div class="solutions-section">
+                    <h3 class="solutions-title">ON DEMAND APPS</h3>
+                    <div class="solutions-grid">
+                      <div class="solutions-column">
+                        <ul>
+                          <li><i class="fas fa-utensils"></i> Food Delivery</li>
+                          <li><i class="fas fa-taxi"></i> Taxi Booking</li>
+                          <li>
+                            <i class="fas fa-home"></i> Clubhouse Clone App
+                          </li>
+                          <li>
+                            <i class="fas fa-utensils"></i> Restaurant
+                            management solution
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="solutions-column">
+                        <ul>
+                          <li>
+                            <i class="fas fa-shopping-basket"></i> Grocery
+                            Delivery
+                          </li>
+                          <li><i class="fas fa-broom"></i> Home Services</li>
+                          <li>
+                            <i class="fas fa-ice-cream"></i> Ice Cream Delivery
+                            App
+                          </li>
+                          <li><i class="fas fa-car"></i> Carpooling Apps</li>
+                        </ul>
+                      </div>
+                      <div class="solutions-column">
+                        <ul>
+                          <li>
+                            <i class="fas fa-exchange-alt"></i> Pickup &
+                            Delivery
+                          </li>
+                          <li>
+                            <i class="fas fa-cut"></i> Beauty & Salon Booking
+                          </li>
+                          <li><i class="fas fa-tshirt"></i> Laundry Service</li>
+                          <li>
+                            <i class="fas fa-briefcase"></i> Marketplace
+                            Solutions
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Award Badge Section -->
+                <div class="solutions-badge">
+                  <div class="badge-container">
+                    <div class="badge-header">TOP 100 COMPANIES</div>
+                    <div class="badge-main">Clutch</div>
+                    <div class="badge-banner">SUSTAINED GROWTH</div>
+                    <div class="badge-year">2022</div>
+                  </div>
+                  <div class="badge-text">
+                    <h4>Clutch</h4>
+                    <p>Top 100 Companies 2022</p>
+                  </div>
+                  <div class="badge-pagination">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#blog">Blog</a></li>
         </ul>
@@ -121,122 +432,6 @@
         </nav>
       </div>
     </div>
-
-    <!-- Service menu -->
-    <!-- <div class="container services-wrapper">
-      <div class="services-left">
-        <h2>SERVICES THAT WE PROVIDE</h2>
-        <div class="services-grid">
-          <div class="service-item">
-            <div class="service-icon blue">💻</div>
-            <div class="service-content">
-              <h5>Software Development</h5>
-              <p>Understand user needs and habits.</p>
-            </div>
-          </div>
-
-          <div class="service-item">
-            <div class="service-icon teal">📱</div>
-            <div class="service-content">
-              <h5>Mobile App Development</h5>
-              <p>Mobile app user trend analysis</p>
-            </div>
-          </div>
-
-          <div class="service-item">
-            <div class="service-icon purple">🌐</div>
-            <div class="service-content">
-              <h5>Web App Development</h5>
-              <p>Creating dynamic web applications.</p>
-            </div>
-          </div>
-
-          <div class="service-item">
-            <div class="service-icon orange">⛓️</div>
-            <div class="service-content">
-              <h5>Blockchain Development Company</h5>
-              <p>Creating Blockchain Apps.</p>
-            </div>
-          </div>
-
-          <div class="service-item">
-            <div class="service-icon green">💰</div>
-            <div class="service-content">
-              <h5>Cryptocurrency Development</h5>
-              <p>Creating Crypto Web & Apps</p>
-            </div>
-          </div>
-
-          <div class="service-item">
-            <div class="service-icon pink">🚀</div>
-            <div class="service-content">
-              <h5>MVP Development</h5>
-              <p>Build MVP Development</p>
-            </div>
-          </div>
-
-          <div class="service-item">
-            <div class="service-icon cyan">🏢</div>
-            <div class="service-content">
-              <h5>Enterprise Software Development</h5>
-              <p>Measure B2B Scope</p>
-            </div>
-          </div>
-
-          <div class="service-item">
-            <div class="service-icon indigo">🎨</div>
-            <div class="service-content">
-              <h5>UX/UI Designing</h5>
-              <p>Creating User centric design</p>
-            </div>
-          </div>
-
-          <div class="service-item">
-            <div class="service-icon blue">🤖</div>
-            <div class="service-content">
-              <h5>AI Development Services</h5>
-              <p>Implementing AI in softwares</p>
-            </div>
-          </div>
-
-          <div class="service-item">
-            <div class="service-icon teal">👥</div>
-            <div class="service-content">
-              <h5>Hire Software Developers</h5>
-              <p>Hire Top Talent as per need</p>
-            </div>
-          </div>
-
-          <div class="service-item">
-            <div class="service-icon purple">📊</div>
-            <div class="service-content">
-              <h5>Digital Marketing</h5>
-              <p>Boost brand awareness & conversions</p>
-            </div>
-          </div>
-
-          <div class="service-item">
-            <div class="service-icon orange">⚡</div>
-            <div class="service-content">
-              <h5>IT Staff Augmentation</h5>
-              <p>Flexible hiring to scale faster</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="services-right">
-        <h3>EGUIDE</h3>
-        <div class="eguide-box">
-          <img src="./image/eguide-book.png" alt="Ebook" class="eguide-img" />
-          <div class="eguide-info">
-            <strong>E Guide</strong>
-            <h4>App Monetization Strategies: How to Make Money From an App?</h4>
-            <p class="eguide-date">Jun 22, 2025</p>
-            <a href="#" class="download-btn">Download now</a>
-          </div>
-        </div>
-      </div>
-    </div> -->
 
     <!--Hero -->
     <section class="hero" id="home">
@@ -346,60 +541,36 @@
       </div>
     </section>
 
-    <!-- <div class="container">
-      <div class="parent-container">
+    <!-- <div class="particles" id="particles"></div>
+    <div class="d-flex align-items-center">
       <div class="timeline">
-        <div class="circle-bg">
-          <img src="./image/circle.png" alt="circle" />
-        </div>
+        <div class="circle-bg"><img src="./image/circle.png" alt="" /></div>
         <div class="timeline-items">
-          <div class="item" data-index="0" style="top: 90px; left: 200px">
-            AI Development
-          </div>
-          <div class="item" data-index="1" style="top: 145px; left: 300px">
-            App Development
-          </div>
-          <div class="item" data-index="2" style="top: 210px; left: 360px">
-            Web Development
-          </div>
-          <div class="item" data-index="3" style="top: 275px; left: 380px">
-            E-Commerce Solution
-          </div>
-          <div class="item" data-index="4" style="top: 340px; left: 380px">
-            UI/UX Development
-          </div>
-          <div class="item" data-index="5" style="top: 405px; left: 365px">
-            Chatbot Development
-          </div>
-          <div class="item" data-index="6" style="top: 470px; left: 330px">
-            Cloud Development
-          </div>
-          <div class="item" data-index="7" style="top: 530px; left: 270px">
-            Software Development
-          </div>
-          <div class="item" data-index="8" style="top: 585px; left: 160px">
-            IoT Development
-          </div>
+          <div class="item" data-index="0">AI Development</div>
+          <div class="item" data-index="1">App Development</div>
+          <div class="item" data-index="2">Web Development</div>
+          <div class="item" data-index="3">E-Commerce Solution</div>
+          <div class="item" data-index="4">Chatbot Development</div>
+          <div class="item" data-index="5">UI/UX Development</div>
+          <div class="item" data-index="6">Cloud Development</div>
+          <div class="item" data-index="7">Software Development</div>
+          <div class="item" data-index="8">IoT Development</div>
         </div>
       </div>
-      <div class="section-content">
-        <div class="number-bg">
-          <img id="number-img" src="./image/1.png" alt="" />
-        </div>
-        <div class="card">
-          <h2 id="card-title">AI Development</h2>
-          <p id="card-text">
-            Reimagine your business with AI Technology. We provide innovative
-            solutions that make work easier and boost production and
-            profitability.
-          </p>
-          <div class="images">
-            <img id="img1" src="./image/ai.png" alt="AI Robot" class="robot" />
-            <img id="img2" src="./image/ai2.png" alt="AI Chip" class="chip" />
-          </div>
-        </div>
+      <img style="width: 260px;" src="./image/1.png" alt="">
+      <div class="card-container">
+      <div class="content">
+        <h2>AI Development</h2>
+        <p>
+          Reimagine your business with AI Technology. We provide innovative solutions
+          that make work easier and boost production and profitability.
+        </p>
       </div>
+      <div class="images">
+        <img src="./image/ai.png" alt="AI Robot" width="250">
+        <img src="./image/ai2.png" alt="AI Brain Illustration" width="220">
       </div>
+      </div>  
     </div> -->
 
     <!-- Awards & Recognition -->
@@ -623,60 +794,6 @@
         autoplay-disable-on-interaction="false"
         slides-per-view="auto"
       >
-        <swiper-slide style="width: 80%">
-          <div class="case-study-card">
-            <div class="content-section">
-              <div class="brand-header">
-                <div class="brand-logo">
-                  <img src="./image/pw.png" alt="" />
-                </div>
-                <h2 class="brand-title">Plan & Work</h2>
-              </div>
-              <p class="description">
-                The Plan&Work app allows our users to check in to
-                theirworkplace,receive detailed plans of their shifts and
-                trackother importantinformation such as work KPIs, statistics
-                andtheir earnings. Thisapp, when used with the Plan&Work
-                SaaSsolution, forms a full-package experience of streamlining
-                theplanning and tracking of workacross the organization.
-              </p>
-              <div class="technologies">
-                <div class="tech-label">Technologies :-</div>
-                <div class="tech-icons">
-                  <div class="tech-icon tech-flutter" style="--delay: 1">
-                    <span><img src="./image/technology1.png" alt="" /></span>
-                  </div>
-                  <div class="tech-icon tech-nodejs" style="--delay: 2">
-                    <span><img src="./image/technology2.png" alt="" /></span>
-                  </div>
-                  <div class="tech-icon tech-angular" style="--delay: 3">
-                    <span><img src="./image/technology3.png" alt="" /></span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="actions">
-                <button class="view-case-btn">
-                  <span>●</span>VIEW CASE STUDY
-                </button>
-                <div class="action-icon share-icon">
-                  <span><img src="./image/applelogo.png" alt="" /></span>
-                </div>
-                <div class="action-icon">
-                  <span><img src="./image/playstore.png" alt="" /></span>
-                </div>
-              </div>
-            </div>
-
-            <div class="image-section">
-              <div class="mockup-image">
-                <div class="workspace-scene">
-                  <img src="./image/plan.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </swiper-slide>
         <swiper-slide style="width: 80%">
           <div class="case-study-card">
             <div class="content-section">
@@ -1358,7 +1475,7 @@
         </div>
       </div>
     </section>
-    
+
     <!-- Industry Section -->
     <section class="container">
       <div class="industry">
@@ -1870,6 +1987,8 @@
       </div>
     </footer>
 
+    <!-- Footer model -->
+
     <script src="./js/Home.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/script1.js"></script>
@@ -1888,64 +2007,60 @@
       AOS.init();
     </script>
 
+    <!-- Website load Pop Up Js -->
     <script>
-      const timelineData = [
-        {
-          number: "1.png",
-          title: "AI Development",
-          text: "Reimagine your business with AI Technology. We provide innovative solutions that make work easier and boost production and profitability.",
-          images: ["ai.png", "ai2.png"],
-        },
-        {
-          number: "2.png",
-          title: "App Development",
-          text: "We create scalable mobile and web apps tailored to your business needs with modern technologies.",
-          images: ["ai.png", "ai2.png"],
-        },
-        {
-          number: "3.png",
-          title: "Web Development",
-          text: "Building responsive, fast, and secure websites with the latest frameworks.",
-          images: ["ai.png", "ai2.png"],
-        },
-        {
-          number: "4.png",
-          title: "E-commerce Solution",
-          text: "Reimagine your business with AI Technology. We provide innovative solutions that make work easier and boost production and profitability.",
-          images: ["ai.png", "ai2.png"],
-        },
-        {
-          number: "5.png",
-          title: "UI UX Developement",
-          text: "We create scalable mobile and web apps tailored to your business needs with modern technologies.",
-          images: ["ai.png", "ai2.png"],
-        },
-        {
-          number: "6.png",
-          title: "Chatbot Development",
-          text: "Building responsive, fast, and secure websites with the latest frameworks.",
-          images: ["ai.png", "ai2.png"],
-        },
-        {
-          number: "7.png",
-          title: "Cloud Development",
-          text: "Reimagine your business with AI Technology. We provide innovative solutions that make work easier and boost production and profitability.",
-          images: ["ai.png", "ai2.png"],
-        },
-        {
-          number: "8.png",
-          title: "Software Development",
-          text: "We create scalable mobile and web apps tailored to your business needs with modern technologies.",
-          images: ["ai.png", "ai2.png"],
-        },
-        {
-          number: "9.png",
-          title: "ioT Development",
-          text: "Building responsive, fast, and secure websites with the latest frameworks.",
-          images: ["ai.png", "ai2.png"],
-        },
-      ];
+      function closePopup() {
+        const popup = document.querySelector(".popup-overlay");
+        popup.style.animation = "fadeOut 0.3s ease-out forwards";
+        setTimeout(() => {
+          popup.style.display = "none";
+        }, 300);
+      }
+
+      function submitForm(event) {
+        event.preventDefault();
+
+        // Get form data
+        const formData = new FormData(event.target);
+        const data = Object.fromEntries(formData);
+
+        // Show success message (you can customize this)
+        alert("Thank you for your interest! We will contact you soon.");
+
+        // Close popup after submission
+        closePopup();
+      }
+
+      // Add fade out animation
+      const style = document.createElement("style");
+      style.textContent = `
+                @keyframes fadeOut {
+                    0% { opacity: 1; transform: scale(1); }
+                    100% { opacity: 0; transform: scale(0.9); }
+                }
+            `;
+      document.head.appendChild(style);
+
+      // Close popup when clicking overlay
+      document
+        .querySelector(".popup-overlay")
+        .addEventListener("click", function (e) {
+          if (e.target === this) {
+            closePopup();
+          }
+        });
+
+      // Close popup with Escape key
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          closePopup();
+        }
+      });
     </script>
+
+    <!-- Footer Pop up -->
+
+    <!-- Number Incre Js -->
 
     <script>
       $(document).ready(function () {

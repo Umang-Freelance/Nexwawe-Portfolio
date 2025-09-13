@@ -896,6 +896,7 @@
 
 .section-title {
   font-size: clamp(24px, 4vw, 36px);
+  color: white;
   font-weight: 800;
   background-clip: text;
   line-height: 1.2;
@@ -960,7 +961,7 @@
   border-radius: 24px;
   backdrop-filter: blur(20px);
   background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* border: 1px solid rgba(255, 255, 255, 0.1); */
 }
 
 .carousel {
@@ -1013,6 +1014,7 @@
 .text-content h3 {
   font-size: clamp(20px, 3vw, 32px);
   font-weight: 700;
+  color: white;
   margin-bottom: 16px;
   background: linear-gradient(135deg, #ffffff 0%, #e5e7eb 100%);
   -webkit-background-clip: text;
@@ -1025,7 +1027,7 @@
 .text-content p {
   font-size: clamp(14px, 1.5vw, 16px);
   line-height: 1.6;
-  color: var(--text-secondary);
+  color: white;
   margin: 0px;
   position: relative;
   z-index: 1;
@@ -1826,12 +1828,12 @@
 }
 
 /* Footer Section */
-footer {
+/* footer {
   position: relative;
   overflow: hidden;
   padding: 80px 0 0;
   margin-top: 50px;
-}
+} */
 
 footer::before {
   content: "";
@@ -2715,3 +2717,5 @@ footer::after {
     min-height: 400px;
   }
 }
+
+/* Footer Pop Up */
