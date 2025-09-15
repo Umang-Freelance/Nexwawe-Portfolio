@@ -50,6 +50,12 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
+    <!-- Font Awesome 6 -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
     <title>Document</title>
   </head>
   <body style="margin: 0px" class="page">
@@ -415,8 +421,14 @@
           <li><a href="#blog">Blog</a></li>
         </ul>
         <div class="nav-buttons-group">
-          <a href="#contact" class="btn-primary">GET IN TOUCH</a>
-          <a href="#entrepreneur" class="btn-secondary">FOR ENTREPRENEURS</a>
+          <a href="#contact" class="btn-primary"
+            >GET IN TOUCH
+            <i style="margin-left: 7px" class="fa-regular fa-greater-than"></i
+          ></a>
+          <a href="#entrepreneur" class="btn-secondary"
+            >FOR ENTREPRENEURS
+            <i style="margin-left: 7px" class="fa-regular fa-greater-than"></i
+          ></a>
           <a href="#" class="menu-btn"
             ><img src="./image/menu.webp" alt=""
           /></a>
@@ -780,28 +792,31 @@
             <div class="icon-container">
               <img style="width: 50px" src="./image/experience.png" alt="" />
             </div>
-            <div class="stat-number" data-target="40">40+</div>
+            <div class="stat-number" data-target="40">0</div>
             <div class="stat-label">Years of experience</div>
           </div>
+
           <div class="stat-item">
             <div class="icon-container">
               <img style="width: 50px" src="./image/projects.png" alt="" />
             </div>
-            <div class="stat-number" data-target="80">80+</div>
+            <div class="stat-number" data-target="80">0</div>
             <div class="stat-label">Projects Complete</div>
           </div>
+
           <div class="stat-item">
             <div class="icon-container">
               <img style="width: 50px" src="./image/member.png" alt="" />
             </div>
-            <div class="stat-number" data-target="50">50+</div>
+            <div class="stat-number" data-target="50">0</div>
             <div class="stat-label">Team member</div>
           </div>
+
           <div class="stat-item">
             <div class="icon-container">
               <img style="width: 50px" src="./image/projects2.png" alt="" />
             </div>
-            <div class="stat-number" data-target="60">60%</div>
+            <div class="stat-number" data-target="60">0</div>
             <div class="stat-label">Projects Complete</div>
           </div>
         </div>
@@ -1239,7 +1254,11 @@
             <img src="./image/tech20.png" alt="Trello" />
           </div>
           <div class="tech-card">
-            <img src="./image/tech18.png" alt="SQL Server" />
+            <img
+              src="./image/tech21.png"
+              style="object-fit: cover"
+              alt="SQL Server"
+            />
           </div>
         </div>
       </div>
@@ -1842,7 +1861,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="container" style="padding: 40px 0px">
+    <section class="" style="padding: 40px 0px">
       <div class="contact contact-section">
         <div class="contact-left">
           <h3>
@@ -2022,106 +2041,92 @@
     </footer>
 
     <!-- Footer model -->
-    <div class="fcontainer">
-      <button class="fclose-btn">&times;</button>
+    <div class="fmodal-overlay">
+      <div class="fcontainer">
+        <button class="fclose-btn">&times;</button>
 
-      <div class="fleft-section">
-        <div class="fhero-content">
-          <h1>Turn Your Idea into a Profit Making App</h1>
-          <p>
-            Reach out to us and start your digital transformation journey today.
-          </p>
-        </div>
-
-        <div class="ftestimonial">
-          <div class="fquote-mark">"</div>
-          <p class="ftestimonial-text">
-            I would like to thank AppUnix for all their hard work. The team had
-            a huge contribution to get everything completed on time. The team
-            communication with the team has been very quick and transparent.
-            AppUnix understood my project very clearly and worked according to
-            that. I would recommend them for mobile app development services as
-            they are the experts in the market.
-          </p>
-
-          <div class="fauthor-section">
-            <div class="fauthor-info">
-              <div class="fauthor-avatar">R</div>
-              <div class="fauthor-details">
-                <h4>Reece Willamson</h4>
-                <p>Founder & CEO of Willamson Fitness</p>
-              </div>
-            </div>
-
-            <div class="fphone-mockup">
-              <div class="fphone-screen"></div>
-            </div>
+        <div class="fleft-section">
+          <div class="fhero-content">
+            <h1>Turn Your Idea into a Profit Making App</h1>
+            <p>
+              Reach out to us and start your digital transformation journey
+              today.
+            </p>
           </div>
 
-          <div class="fpagination-dots">
-            <div class="fdot active"></div>
-            <div class="fdot"></div>
-            <div class="fdot"></div>
-            <div class="fdot"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="fright-section">
-        <form class="fform-container">
-          <div class="fform-row">
-            <div class="fform-group">
-              <label>Full Name</label>
-              <input type="text" placeholder="Enter Full Name" required />
-            </div>
-            <div class="fform-group">
-              <label>Mobile Number</label>
-              <div class="fphone-input">
-                <div class="fcountry-code">
-                  <div class="fflag"></div>
-                  +91
+          <div class="ftestimonial">
+            <div class="fquote-mark">"</div>
+            <p class="ftestimonial-text">
+              I would like to thank AppUnix for all their hard work...
+            </p>
+            <div class="fauthor-section">
+              <div class="fauthor-info">
+                <div class="fauthor-avatar">R</div>
+                <div class="fauthor-details">
+                  <h4>Reece Willamson</h4>
+                  <p>Founder & CEO of Willamson Fitness</p>
                 </div>
-                <input type="tel" required />
+              </div>
+              <div class="fphone-mockup">
+                <div class="fphone-screen"></div>
               </div>
             </div>
-          </div>
-
-          <div class="fform-group">
-            <label>Business Email</label>
-            <input type="email" placeholder="Enter Business Email" required />
-          </div>
-
-          <div class="fform-group">
-            <label>When do you want to launch a solution?</label>
-            <input type="text" placeholder="Timeline" />
-          </div>
-
-          <div class="fform-group">
-            <label>Budget</label>
-            <div class="fbudget-options">
-              <div class="fbudget-option">$5k-$25K</div>
-              <div class="fbudget-option">$25k-$50K</div>
-              <div class="fbudget-option active">$50k-$100K</div>
-              <div class="fbudget-option">$100k</div>
+            <div class="fpagination-dots">
+              <div class="fdot active"></div>
+              <div class="fdot"></div>
+              <div class="fdot"></div>
             </div>
           </div>
+        </div>
 
-          <div class="fform-group fdescription-field">
-            <label>Description</label>
-            <textarea
-              placeholder="Please Share Your Business Requirements"
-            ></textarea>
-          </div>
-
-          <p class="fcontact-info">
-            You can also drop your requirements at
-            <strong>sales@appunix.com</strong><br />
-            right on it!
-            <span style="margin-left: 150px">and our teamm will get</span>
-          </p>
-
-          <button type="submit" class="fsubmit-btn">Submit</button>
-        </form>
+        <div class="fright-section">
+          <form class="fform-container">
+            <div class="fform-row">
+              <div class="fform-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter Full Name" required />
+              </div>
+              <div class="fform-group">
+                <label>Mobile Number</label>
+                <div class="fphone-input">
+                  <div class="fcountry-code">
+                    <div class="fflag"></div>
+                    +91
+                  </div>
+                  <input type="tel" required />
+                </div>
+              </div>
+            </div>
+            <div class="fform-group">
+              <label>Business Email</label>
+              <input type="email" placeholder="Enter Business Email" required />
+            </div>
+            <div class="fform-group">
+              <label>When do you want to launch a solution?</label>
+              <input type="text" placeholder="Timeline" />
+            </div>
+            <div class="fform-group">
+              <label>Budget</label>
+              <div class="fbudget-options">
+                <div class="fbudget-option">$5k-$25K</div>
+                <div class="fbudget-option">$25k-$50K</div>
+                <div class="fbudget-option active">$50k-$100K</div>
+                <div class="fbudget-option">$100k+</div>
+              </div>
+            </div>
+            <div class="fform-group fdescription-field">
+              <label>Description</label>
+              <textarea
+                placeholder="Please Share Your Business Requirements"
+              ></textarea>
+            </div>
+            <p class="fcontact-info">
+              You can also drop your requirements at
+              <strong>sales@appunix.com</strong>
+            </p>
+            <button type="submit" class="fsubmit-btn">Submit</button>
+          </form>
+        </div>
       </div>
     </div>
 
@@ -2141,6 +2146,109 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script>
       AOS.init();
+    </script>
+
+    <!-- ✅ JavaScript -->
+    <script>
+      function animateCounter(counter) {
+        const target = +counter.getAttribute("data-target");
+        const duration = 2000; // 2s animation
+        const stepTime = 20;
+        let current = 0;
+        const increment = target / (duration / stepTime);
+
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            counter.textContent =
+              target + (counter.textContent.includes("%") ? "%" : "+");
+            clearInterval(timer);
+          } else {
+            counter.textContent =
+              Math.floor(current) +
+              (counter.textContent.includes("%") ? "%" : "+");
+          }
+        }, stepTime);
+      }
+
+      // ✅ Trigger animation when stats-container is visible
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target
+                .querySelectorAll(".stat-number")
+                .forEach((num) => animateCounter(num));
+              observer.unobserve(entry.target); // run only once
+            }
+          });
+        },
+        { threshold: 0.5 } // trigger when 50% visible
+      );
+
+      observer.observe(document.querySelector(".stats-container"));
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Typed("#typed-text", {
+          strings: [
+            "Mobile App Developer",
+            "Web Developers",
+            "UI/UX Designers",
+            "Digital Marketers",
+          ],
+          typeSpeed: 60,
+          backSpeed: 60,
+          backDelay: 1500,
+          loop: true,
+        });
+      });
+
+      // Award Carousel JS
+      const container = document.querySelector(".carousel-container");
+      const slides = document.querySelectorAll(".award-badge");
+      const dotsContainer = document.querySelector(".carousel-dots");
+
+      let scrollSpeed = 0.5;
+      let position = 0;
+      let isManual = false;
+
+      container.innerHTML += container.innerHTML;
+      const totalSlides = slides.length;
+
+      for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement("span");
+        dot.classList.add("dot");
+        if (i === 0) dot.classList.add("active");
+        dot.addEventListener("click", () => showSlide(i));
+        dotsContainer.appendChild(dot);
+      }
+      const awardDots = document.querySelectorAll(".dot");
+
+      function loop() {
+        if (!isManual) {
+          position -= scrollSpeed;
+          if (Math.abs(position) >= container.scrollWidth / 2) {
+            position = 0;
+          }
+          container.style.transform = `translateX(${position}px)`;
+        }
+        requestAnimationFrame(loop);
+      }
+      loop();
+
+      function showSlide(i) {
+        isManual = true;
+        const slideWidth = document.querySelector(".award-badge").offsetWidth;
+        position = -(i * slideWidth);
+        container.style.transform = `translateX(${position}px)`;
+        awardDots.forEach((dot) => dot.classList.remove("active"));
+        awardDots[i]?.classList.add("active");
+        setTimeout(() => {
+          isManual = false;
+        }, 3000);
+      }
     </script>
 
     <!-- Website load Pop Up Js -->
@@ -2213,9 +2321,7 @@
       });
 
       document.querySelector(".fclose-btn").addEventListener("click", () => {
-        if (confirm("Are you sure you want to close?")) {
-          window.close();
-        }
+        window.close();
       });
 
       document.querySelector("form").addEventListener("submit", (e) => {
@@ -2321,55 +2427,36 @@
     </script>
 
     <!-- Add this JavaScript before the closing </body> tag -->
+    <!-- Footer model -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const contactBtn = document.querySelector(".contact-btn");
         const modalOverlay = document.querySelector(".fmodal-overlay");
         const closeBtn = document.querySelector(".fclose-btn");
-        if (!modalOverlay) {
-          const modal = document.createElement("div");
-          modal.className = "fmodal-overlay";
-          const existingModal = document.querySelector(".fcontainer");
-          if (existingModal) {
-            existingModal.parentNode.insertBefore(modal, existingModal);
-            modal.appendChild(existingModal);
-          }
-        }
+
         if (contactBtn) {
-          contactBtn.addEventListener("click", function (e) {
+          contactBtn.addEventListener("click", (e) => {
             e.preventDefault();
-            const overlay = document.querySelector(".fmodal-overlay");
-            if (overlay) {
-              overlay.classList.add("show");
-              document.body.style.overflow = "hidden";
-            }
+            modalOverlay.classList.add("show");
+            document.body.style.overflow = "hidden";
           });
         }
         if (closeBtn) {
-          closeBtn.addEventListener("click", function () {
-            const overlay = document.querySelector(".fmodal-overlay");
-            if (overlay) {
-              overlay.classList.remove("show");
-              document.body.style.overflow = "auto"; // Restore scrolling
-            }
+          closeBtn.addEventListener("click", () => {
+            modalOverlay.classList.remove("show");
+            document.body.style.overflow = "auto";
           });
         }
-        const overlay = document.querySelector(".fmodal-overlay");
-        if (overlay) {
-          overlay.addEventListener("click", function (e) {
-            if (e.target === overlay) {
-              overlay.classList.remove("show");
-              document.body.style.overflow = "auto";
-            }
-          });
-        }
-        document.addEventListener("keydown", function (e) {
-          if (e.key === "Escape") {
-            const overlay = document.querySelector(".fmodal-overlay");
-            if (overlay && overlay.classList.contains("show")) {
-              overlay.classList.remove("show");
-              document.body.style.overflow = "auto";
-            }
+        modalOverlay.addEventListener("click", (e) => {
+          if (e.target === modalOverlay) {
+            modalOverlay.classList.remove("show");
+            document.body.style.overflow = "auto";
+          }
+        });
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && modalOverlay.classList.contains("show")) {
+            modalOverlay.classList.remove("show");
+            document.body.style.overflow = "auto";
           }
         });
 
@@ -2380,30 +2467,16 @@
             option.classList.add("active");
           });
         });
-        const dots = document.querySelectorAll(".fdot");
-        dots.forEach((dot, index) => {
-          dot.addEventListener("click", () => {
-            dots.forEach((d) => d.classList.remove("active"));
-            dot.classList.add("active");
-          });
-        });
+
         const form = document.querySelector("form");
         if (form) {
           form.addEventListener("submit", (e) => {
             e.preventDefault();
             alert("Form submitted successfully! We will get back to you soon.");
+            modalOverlay.classList.remove("show");
+            document.body.style.overflow = "auto";
           });
         }
-        const inputs = document.querySelectorAll("input, textarea");
-        inputs.forEach((input) => {
-          input.addEventListener("focus", (e) => {
-            e.target.style.transform = "translateY(-2px)";
-          });
-
-          input.addEventListener("blur", (e) => {
-            e.target.style.transform = "translateY(0)";
-          });
-        });
       });
     </script>
   </body>

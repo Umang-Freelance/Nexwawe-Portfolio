@@ -337,7 +337,26 @@ body {
   z-index: -10;
   pointer-events: none;
   overflow: hidden;
-  background: linear-gradient(to bottom, #0f0d12 0%, #141216 100%);
+  background:
+    radial-gradient(1200px 800px at 10% 10%, rgba(99, 102, 241, 0.18), rgba(99, 102, 241, 0) 60%),
+    radial-gradient(1000px 700px at 90% 80%, rgba(236, 72, 153, 0.12), rgba(236, 72, 153, 0) 60%),
+    radial-gradient(900px 600px at 80% 20%, rgba(45, 212, 191, 0.12), rgba(45, 212, 191, 0) 60%),
+    linear-gradient(180deg, #0b0b13 0%, #111018 40%, #0b0b13 100%);
+  background-repeat: no-repeat;
+  background-size: 120% 120%, 120% 120%, 120% 120%, 100% 100%;
+  background-position: 0% 0%, 100% 100%, 80% 20%, center;
+  animation: bgDrift 20s ease-in-out infinite alternate;
+}
+
+@keyframes bgDrift {
+  0% {
+    background-position: 0% 0%, 100% 100%, 80% 20%, center;
+    filter: saturate(1);
+  }
+  100% {
+    background-position: 5% 3%, 95% 85%, 78% 22%, center;
+    filter: saturate(1.05);
+  }
 }
 
 .blob {
@@ -354,7 +373,7 @@ body {
   height: 420px;
   top: -80px;
   right: -96px;
-  background: rgba(72, 38, 121, 0.3);
+  background: rgba(99, 102, 241, 0.35);
   filter: blur(60px);
 }
 
@@ -363,7 +382,7 @@ body {
   height: 420px;
   bottom: -96px;
   left: -96px;
-  background: rgba(151, 47, 124, 0.3);
+  background: rgba(236, 72, 153, 0.25); 
   filter: blur(60px);
 }
 
@@ -372,7 +391,7 @@ body {
   height: 320px;
   bottom: -160px;
   right: -160px;
-  background: rgba(47, 126, 144, 0.2);
+  background: rgba(45, 212, 191, 0.20); 
   filter: blur(36px);
 }
 
@@ -491,6 +510,17 @@ body {
   font-weight: 400;
   text-decoration: none;
   transition: all 0.3s ease;
+}
+
+.btn-primary i,
+.btn-secondary i {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.btn-primary:hover i,
+.btn-secondary:hover i {
+  transform: translateX(5px); /* arrow moves right */
 }
 
 .menu-btn {
@@ -3486,96 +3516,112 @@ swiper-slide img {
 }
 
 /* Footer Model */
+.fmodal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 20px;
+  overflow-y: auto; /* small screen ma scroll allow */
+}
+
+.fmodal-overlay.show {
+  display: flex;
+}
+
+/* Modal Container */
 .fcontainer {
   display: flex;
+  flex-direction: row;
   padding: 30px;
   gap: 40px;
-  margin: 0 auto;
-  position: relative;
   background-image: url(../image/footermodel.png);
   background-size: cover;
-  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
   max-width: 1000px;
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
-  border-radius: 20px;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  position: relative;
+  animation: fadeInScale 0.3s ease;
 }
 
+/* Close Button */
 .fclose-btn {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 30px;
-  height: 30px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  top: 15px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 50%;
+  font-size: 20px;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 18px;
-  color: white;
-  z-index: 10;
+  z-index: 20;
+  transition: all 0.3s ease;
 }
-
 .fclose-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(90deg);
 }
 
+/* Left Section */
 .fleft-section {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 .fhero-content h1 {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 20px;
 }
-
 .fhero-content p {
   font-size: 1.1rem;
   opacity: 0.9;
   line-height: 1.6;
 }
-
 .ftestimonial {
   border-radius: 15px;
   margin-bottom: 30px;
 }
-
 .fquote-mark {
   font-size: 4rem;
   opacity: 0.3;
   line-height: 1;
-  margin-bottom: 15px;
 }
-
 .ftestimonial-text {
   font-size: 0.95rem;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   opacity: 0.9;
 }
-
 .fauthor-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .fauthor-info {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-
 .fauthor-avatar {
   width: 50px;
   height: 50px;
@@ -3587,17 +3633,14 @@ swiper-slide img {
   font-weight: bold;
   font-size: 1.2rem;
 }
-
 .fauthor-details h4 {
   font-size: 1rem;
   margin-bottom: 5px;
 }
-
 .fauthor-details p {
   font-size: 0.85rem;
   opacity: 0.7;
 }
-
 .fphone-mockup {
   width: 120px;
   height: 200px;
@@ -3607,7 +3650,6 @@ swiper-slide img {
   position: relative;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
-
 .fphone-screen {
   width: 100%;
   height: 100%;
@@ -3616,13 +3658,11 @@ swiper-slide img {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="30" fill="%23f0f0f0"/><rect width="100" height="70" y="30" fill="%23ffffff"/><circle cx="50" cy="65" r="15" fill="%23ff6b9d"/></svg>');
   background-size: cover;
 }
-
 .fpagination-dots {
   display: flex;
   gap: 8px;
   margin-top: 20px;
 }
-
 .fdot {
   width: 8px;
   height: 8px;
@@ -3630,40 +3670,35 @@ swiper-slide img {
   background: rgba(255, 255, 255, 0.3);
   cursor: pointer;
 }
-
 .fdot.active {
   background: #4ecdc4;
 }
 
+/* Right Section */
 .fright-section {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 .fform-container {
   backdrop-filter: blur(20px);
   border-radius: 20px;
 }
-
 .fform-row {
   display: flex;
   gap: 15px;
   margin-bottom: 20px;
 }
-
 .fform-group {
   flex: 1;
 }
-
 .fform-group label {
   display: block;
   margin-bottom: 8px;
   font-size: 0.9rem;
   opacity: 0.9;
 }
-
 .fform-group input,
 .fform-group textarea {
   width: 100%;
@@ -3675,14 +3710,12 @@ swiper-slide img {
   font-size: 1rem;
   transition: all 0.3s ease;
 }
-
 .fform-group input:focus,
 .fform-group textarea:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.3);
   transform: translateY(-2px);
 }
-
 .fphone-input {
   display: flex;
   align-items: center;
@@ -3690,7 +3723,6 @@ swiper-slide img {
   border-radius: 12px;
   padding: 2px;
 }
-
 .fcountry-code {
   display: flex;
   align-items: center;
@@ -3700,7 +3732,6 @@ swiper-slide img {
   color: #333;
   font-size: 1rem;
 }
-
 .fflag {
   width: 20px;
   height: 15px;
@@ -3714,20 +3745,17 @@ swiper-slide img {
   margin-right: 8px;
   border-radius: 2px;
 }
-
 .fphone-input input {
   flex: 1;
   border: none;
   background: transparent;
   padding: 15px 15px 15px 0;
 }
-
 .fbudget-options {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
-
 .fbudget-option {
   padding: 12px 18px;
   background: rgba(255, 255, 255, 0.1);
@@ -3738,24 +3766,20 @@ swiper-slide img {
   font-size: 0.8rem;
   white-space: nowrap;
 }
-
 .fbudget-option:hover,
 .fbudget-option.active {
   background: #4ecdc4;
   border-color: #4ecdc4;
   transform: translateY(-2px);
 }
-
 .fdescription-field textarea {
   min-height: 100px;
   resize: vertical;
 }
-
 .fcontact-info {
   font-size: 0.9rem;
   opacity: 0.8;
 }
-
 .fsubmit-btn {
   padding: 15px 40px;
   background: #007bff;
@@ -3767,115 +3791,60 @@ swiper-slide img {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
 .fsubmit-btn:hover {
   background: #0056b3;
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 1024px) {
-  .fhero-content h1 {
-    font-size: 2.5rem;
-  }
-
-  .fleft-section,
-  .fright-section {
-    padding: 30px;
+  .fcontainer {
+    flex-direction: column;
+    max-width: 90%;
+    max-height: 90vh;
   }
 }
-
 @media (max-width: 768px) {
   .fcontainer {
     flex-direction: column;
-  }
-
-  .fleft-section {
-    padding: 30px 20px;
-    text-align: center;
-  }
-
-  .fright-section {
-    padding: 30px 20px;
-  }
-
-  .fhero-content h1 {
-    font-size: 2rem;
-  }
-
-  .fform-row {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .fauthor-section {
-    flex-direction: column;
+    padding: 20px;
     gap: 20px;
-    text-align: center;
   }
-
-  .fbudget-options {
-    justify-content: center;
-  }
-
-  .fbudget-option {
-    flex: 1;
-    min-width: calc(50% - 5px);
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
   .fhero-content h1 {
     font-size: 1.8rem;
   }
-
   .fform-container {
-    padding: 30px 20px;
-  }
-
-  .ftestimonial {
     padding: 20px;
   }
-
-  .fbudget-option {
-    min-width: 100%;
+}
+@media (max-width: 480px) {
+  .fcontainer {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    padding: 15px;
+  }
+  .fhero-content h1 {
+    font-size: 1.5rem;
+  }
+  .fclose-btn {
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
   }
 }
 
-/* Add this CSS for modal functionality */
-.fmodal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 10000;
-  padding: 20px;
-}
-
-.fmodal-overlay.show {
-  display: flex;
-}
-
-.fcontainer {
-  display: flex;
-  padding: 30px;
-  gap: 40px;
-  margin: 0 auto;
-  position: relative;
-  background-image: url(../image/footermodel.png);
-  background-size: cover;
-  object-fit: cover;
-  max-width: 1000px;
-  width: 100%;
-  max-height: 90vh;
-  overflow-y: auto;
-  border-radius: 20px;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+/* Animation */
+@keyframes fadeInScale {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

@@ -8,67 +8,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Auto Write Js
-document.addEventListener("DOMContentLoaded", function () {
-  new Typed("#typed-text", {
-    strings: [
-      "Mobile App Developer",
-      "Web Developers",
-      "UI/UX Designers",
-      "Digital Marketers",
-    ],
-    typeSpeed: 60,
-    backSpeed: 60,
-    backDelay: 1500,
-    loop: true,
-  });
-});
-
-// Award Carousel JS
-const container = document.querySelector(".carousel-container");
-const slides = document.querySelectorAll(".award-badge");
-const dotsContainer = document.querySelector(".carousel-dots");
-
-let scrollSpeed = 0.5;
-let position = 0;
-let isManual = false;
-
-container.innerHTML += container.innerHTML;
-const totalSlides = slides.length;
-
-for (let i = 0; i < totalSlides; i++) {
-  const dot = document.createElement("span");
-  dot.classList.add("dot");
-  if (i === 0) dot.classList.add("active");
-  dot.addEventListener("click", () => showSlide(i));
-  dotsContainer.appendChild(dot);
-}
-const dots = document.querySelectorAll(".dot");
-
-function loop() {
-  if (!isManual) {
-    position -= scrollSpeed;
-    if (Math.abs(position) >= container.scrollWidth / 2) {
-      position = 0;
-    }
-    container.style.transform = `translateX(${position}px)`;
-  }
-  requestAnimationFrame(loop);
-}
-loop();
-
-function showSlide(i) {
-  isManual = true;
-  const slideWidth = document.querySelector(".award-badge").offsetWidth;
-  position = -(i * slideWidth);
-  container.style.transform = `translateX(${position}px)`;
-  dots.forEach((dot) => dot.classList.remove("active"));
-  dots[i].classList.add("active");
-  setTimeout(() => {
-    isManual = false;
-  }, 3000);
-}
-
 // Auto Number Increment JS
 
 // Watch Slider JS
