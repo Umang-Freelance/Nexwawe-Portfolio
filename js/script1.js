@@ -204,6 +204,44 @@ const accordions = document.querySelectorAll(".accordion");
 
 // <!-- contact-section -->
 
+
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      // Remove 'active' class from all buttons
+      buttons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      const key = button.getAttribute("data-country");
+      const data = officeData[key];
+
+      if (data) {
+        countryName.innerText = data.name;
+        countryAddress.innerHTML = data.address;
+        countryIcon.src = data.icon;
+      }
+    });
+  });
+
+  // Prev/Next navigation for countries
+  const prevBtn = document.querySelector(".contact-nav .prev");
+  const nextBtn = document.querySelector(".contact-nav .next");
+
+  function getActiveIndex() {
+    return Array.from(buttons).findIndex(b => b.classList.contains("active"));
+  }
+  function goTo(index) {
+    const list = Array.from(buttons);
+    const n = list.length;
+    const i = (index + n) % n;
+    list[i].click();
+    list[i].focus();
+  }
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener("click", () => goTo(getActiveIndex() - 1));
+    nextBtn.addEventListener("click", () => goTo(getActiveIndex() + 1));
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
   const contactLeft = document.querySelector(".contact-left");
 

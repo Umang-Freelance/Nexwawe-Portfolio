@@ -56,12 +56,12 @@
 }
 
 .accordion {
-  background: linear-gradient(135deg, #1e1e1e 0%, #2d2d2d 100%);
+  background: linear-gradient(135deg, #2a2a2a 0%, #333333 100%);
   color: #fff;
   padding: 20px 24px;
   /* border-radius: 16px; */
   /* margin-bottom: 12px; */
-  border: 1px solid rgba(100, 255, 218, 0.2);
+  /* border: 1px solid rgba(100, 255, 218, 0.2); */
   /* font-weight: 600; */
   display: flex;
   justify-content: space-between;
@@ -136,7 +136,7 @@
   font-weight: 300;
   line-height: 1.7;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(100, 255, 218, 0.1);
+  /* border: 1px solid rgba(100, 255, 218, 0.1); */
   border-top: none;
   /* box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.2); */
 }
@@ -146,7 +146,7 @@
   padding: 24px;
   opacity: 1;
   transform: translateY(0);
-  border-color: rgba(100, 255, 218, 0.3);
+  /* border-color: rgba(100, 255, 218, 0.3); */
 }
 
 .faq-right {
@@ -1637,8 +1637,9 @@
 }
 
 /* Contact Section Css */
+
 .contact {
-  background: #000 url("../image/Image (1).webp") no-repeat center center;
+  background: url("../image/Image (1).webp") no-repeat center center;
   background-size: cover;
   color: #fff;
   padding: 60px 20px;
@@ -1669,7 +1670,7 @@
   font-size: 26px;
 }
 
-.contact-left p {
+.contact-left .contact-text {
   font-size: 20px;
   color: #d4d2d2;
   font-weight: 100px;
@@ -1680,6 +1681,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 65px;
+  font-weight: 600;
   padding: 20px 0;
 }
 
@@ -1690,6 +1692,42 @@
   color: #fff;
 }
 
+.country-address p {
+  font-size: 12px;
+}
+
+.contact-nav {
+  display: flex;
+  justify-content: center; /* center buttons */
+  align-items: center;
+  gap: 12px; /* space between buttons */
+  margin-top: 20px;
+}
+
+.nav-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a4a5c, #2d7a8c);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn:hover {
+  background: linear-gradient(135deg, #2d7a8c, #1a4a5c);
+  transform: scale(1.1);
+}
+
+.nav-btn:active {
+  transform: scale(0.95);
+}
+
+
 .address-inline {
   display: flex;
   align-items: flex-start;
@@ -1697,7 +1735,7 @@
 }
 
 .address-inline img {
-  width: 24px;
+  width: 45px;
   height: auto;
   margin-top: 4px;
 }
@@ -2677,7 +2715,7 @@ footer::after {
     font-size: 28px;
   }
 
-  .contact-left p {
+  .contact-left .contact-text {
     font-size: 20px;
   }
 

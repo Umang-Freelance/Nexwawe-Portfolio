@@ -59,12 +59,17 @@
     <title>Document</title>
   </head>
   <body style="margin: 0px" class="page">
-    <!-- <div class="bg-fixed" aria-hidden="true">
-        <div class="blob a"></div>
-        <div class="blob b"></div>
-        <div class="blob c"></div>
-      </div> -->
+    <div class="wrapper">
+  <!-- Background layer fixed to viewport -->
+  <div class="background">
+    <!-- Decorative blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
 
+  <!-- Your content goes here -->
+  <!-- <div class="bg-gradient"> -->
     <!-- Web load pop up -->
     <div class="popup-overlay">
       <div class="popup-container">
@@ -362,23 +367,42 @@
                 </div>
 
                 <!-- Award Badge Section -->
-                <div class="solutions-badge">
-                  <div class="badge-container">
-                    <div class="badge-header">TOP 100 COMPANIES</div>
-                    <div class="badge-main">Clutch</div>
-                    <div class="badge-banner">SUSTAINED GROWTH</div>
-                    <div class="badge-year">2022</div>
+                <div class="owl-carousel badge-slider">
+                  <div class="solutions-badge">
+                    <div class="badge-container">
+                      <img src="./image/awardSlide1.png" alt="">
+                    </div>
+                    <div class="badge-text">
+                      <h4>Clutch</h4>
+                      <p>Top 100 Companies 2022</p>
+                    </div>
                   </div>
-                  <div class="badge-text">
-                    <h4>Clutch</h4>
-                    <p>Top 100 Companies 2022</p>
+                  <div class="solutions-badge">
+                    <div class="badge-container">
+                      <img src="./image/awardSlide2.png" alt="">
+                    </div>
+                    <div class="badge-text">
+                      <h4>Design</h4>
+                      <p>Innovation Award 2023</p>
+                    </div>
                   </div>
-                  <div class="badge-pagination">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+                  <div class="solutions-badge">
+                    <div class="badge-container">
+                      <img src="./image/awardSlide3.png" alt="">
+                    </div>
+                    <div class="badge-text">
+                      <h4>Design</h4>
+                      <p>Innovation Award 2023</p>
+                    </div>
+                  </div>
+                  <div class="solutions-badge">
+                    <div class="badge-container">
+                      <img src="./image/awardSlide4.png" alt="">
+                    </div>
+                    <div class="badge-text">
+                      <h4>Design</h4>
+                      <p>Innovation Award 2023</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -429,9 +453,7 @@
             >FOR ENTREPRENEURS
             <i style="margin-left: 7px" class="fa-regular fa-greater-than"></i
           ></a>
-          <a href="#" class="menu-btn"
-            ><img src="./image/menu.webp" alt=""
-          /></a>
+          <a href="#" class="menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./image/menu.webp" alt=""/></a>
         </div>
         <button
           class="mobile-menu-toggle"
@@ -444,6 +466,57 @@
         </button>
       </nav>
     </header>
+
+    <!-- Header Sidebar -->
+    <div style="background-color: #1a1a1a;" class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <!-- <button type="button" class="btn-close" ></button> -->
+         <div class="model-close" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></div>
+      </div>
+      <div class="offcanvas-body">
+        <div class="sidebar">
+          <div class="logo">
+            <img src="./image/logo.webp" alt="">
+          </div>
+         
+          <p class="description">
+            Duis a orci nunc. Suspendisse ac convallis sapien, quis commodo libero. 
+            Donec nec duomoi luctus, pellentesque lacus sed, mollis going leo.
+          </p>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="contact-text">
+              16B/170, Avenue 01, Old York Drive Rich<br>
+              Mirpur DOHS, Bangladesh
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="contact-text">
+              +880 566 1111 985<br>
+              +880 657 1111 576
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="contact-text">
+              info@example.com<br>
+              info@support.com
+            </div>
+          </div>
+          <div class="social">
+            <h3>Follow Us</h3>
+            <p>Follow us on Social Network</p>
+            <div class="social-iconsbar">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div
       class="offcanvas offcanvas-top seth"
@@ -524,7 +597,7 @@
     </section>
 
     <!-- Trusted By -->
-    <section class="container trusted-by">
+    <section class=" trusted-by">
       <div class="trusted-logos-container">
         <div class="fixed-logo">
           <img style="width: 150px" src="./image/slider1.webp" alt="" />
@@ -1861,7 +1934,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="" style="padding: 40px 0px">
+    <section class="container" style="padding: 40px 0px">
       <div class="contact contact-section">
         <div class="contact-left">
           <h3>
@@ -1869,23 +1942,23 @@
             transform ideas into impact.
           </h3>
           <br />
-          <p>Book your free consultation with us.</p>
+          <p class="contact-text">Book your free consultation with us.</p>
           <h1 class="gradient-text">Let's Talk!</h1>
 
           <div class="office-info">
-            <h5 id="country-name">UNITED ARAB EMIRATES</h5>
             <div class="address-inline">
               <img
                 id="country-icon"
                 src="./image/icon.webp"
                 alt="Office Icon"
               />
-              <p id="country-address">
-                One Central, The Offices 3, Level 3,<br />
-                DWTC, Sheikh Zayed Road, Dubai,<br />
-                United Arab Emirates<br />
-                <strong>+971507821690</strong>
-              </p>
+              <div class="country-address" id="country-address">
+                <span id="country-name">UNITED ARAB EMIRATES</span>
+                <p>One Central, The Offices 3, Level 3,</br>
+                DWTC, Sheikh Zayed Road, Dubai,</br>
+                United Arab Emirates</p>
+                <span>+971507821690</span>
+              </div>
             </div>
           </div>
 
@@ -1904,6 +1977,11 @@
             </button>
           </div>
         </div>
+      <div class="contact-nav">
+        <button type="button" class="nav-btn prev" aria-label="Previous country">‹</button>
+        <button type="button" class="nav-btn next" aria-label="Next country">›</button>
+      </div>
+
         <div class="contact-right fade-in-down">
           <h3>Speak With Our Experts</h3>
           <form id="contactForm">
@@ -2039,6 +2117,7 @@
         </div>
       </div>
     </footer>
+  <!-- </div> -->
 
     <!-- Footer model -->
     <div class="fmodal-overlay">
@@ -2054,27 +2133,72 @@
             </p>
           </div>
 
-          <div class="ftestimonial">
-            <div class="fquote-mark">"</div>
-            <p class="ftestimonial-text">
-              I would like to thank AppUnix for all their hard work...
-            </p>
-            <div class="fauthor-section">
-              <div class="fauthor-info">
-                <div class="fauthor-avatar">R</div>
-                <div class="fauthor-details">
-                  <h4>Reece Willamson</h4>
-                  <p>Founder & CEO of Willamson Fitness</p>
+          <div class="owl-carousel ftestimonial-carousel">
+            <div class="ftestimonial">
+              <div class="fquote-mark">"</div>
+              <p class="ftestimonial-text">
+                I would like to therk Apptunix for all their hard work The team hed a huge
+contribution to get everything completed on time The team communication
+with the teem has been very quick and transparent. Apptunix understood my
+project very cleerly and worked according to that, I would recommend them
+for mobile app development services as they are the experts in the merket.
+              </p>
+              <div class="fauthor-section">
+                <div class="fauthor-info">
+                  <div class="fauthor-avatar">R</div>
+                  <div class="fauthor-details">
+                    <h4>Reece Willamson</h4>
+                    <p>Founder & CEO of Willamson Fitness</p>
+                  </div>
+                </div>
+                <div class="fphone-mockup">
+                  <div class="fphone-screen"></div>
                 </div>
               </div>
-              <div class="fphone-mockup">
-                <div class="fphone-screen"></div>
+            </div>
+            <div class="ftestimonial">
+              <div class="fquote-mark">"</div>
+              <p class="ftestimonial-text">
+               I would like to therk Apptunix for all their hard work The team hed a huge
+contribution to get everything completed on time The team communication
+with the teem has been very quick and transparent. Apptunix understood my
+project very cleerly and worked according to that, I would recommend them
+for mobile app development services as they are the experts in the merket.
+              </p>
+              <div class="fauthor-section">
+                <div class="fauthor-info">
+                  <div class="fauthor-avatar">A</div>
+                  <div class="fauthor-details">
+                    <h4>Anna Smith</h4>
+                    <p>Product Manager at TechCorp</p>
+                  </div>
+                </div>
+                <div class="fphone-mockup">
+                  <div class="fphone-screen"></div>
+                </div>
               </div>
             </div>
-            <div class="fpagination-dots">
-              <div class="fdot active"></div>
-              <div class="fdot"></div>
-              <div class="fdot"></div>
+            <div class="ftestimonial">
+              <div class="fquote-mark">"</div>
+              <p class="ftestimonial-text">
+               I would like to therk Apptunix for all their hard work The team hed a huge
+contribution to get everything completed on time The team communication
+with the teem has been very quick and transparent. Apptunix understood my
+project very cleerly and worked according to that, I would recommend them
+for mobile app development services as they are the experts in the merket.
+              </p>
+              <div class="fauthor-section">
+                <div class="fauthor-info">
+                  <div class="fauthor-avatar">R</div>
+                  <div class="fauthor-details">
+                    <h4>Reece Willamson</h4>
+                    <p>Founder & CEO of Willamson Fitness</p>
+                  </div>
+                </div>
+                <div class="fphone-mockup">
+                  <div class="fphone-screen"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -2097,11 +2221,11 @@
                 </div>
               </div>
             </div>
-            <div class="fform-group">
+            <div class="fform-group mb-2">
               <label>Business Email</label>
               <input type="email" placeholder="Enter Business Email" required />
             </div>
-            <div class="fform-group">
+            <div class="fform-group mb-2">
               <label>When do you want to launch a solution?</label>
               <input type="text" placeholder="Timeline" />
             </div>
@@ -2144,9 +2268,51 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
       AOS.init();
     </script>
+
+    <!-- Header menu slider -->
+    <script>
+  $(document).ready(function(){
+    $(".badge-slider").owlCarousel({
+      loop:true,
+      margin:30,
+      dots:true,
+      autoplay:true,
+      autoplayTimeout:4000,
+      autoplayHoverPause:true,
+      responsive:{
+        0:{ items:1 },
+        600:{ items:1 },
+        1000:{ items:1 }
+      }
+    });
+  });
+    </script>
+
+    <!-- footer model slider -->
+     <script>
+      $(document).ready(function(){
+  $(".ftestimonial-carousel").owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    autoplayTimeout: 4000,
+    responsive: {
+      0: { items: 1 },
+      768: { items: 1 },
+      1024: { items: 1 }
+    }
+  });
+});
+
+     </script>
+
 
     <!-- ✅ JavaScript -->
     <script>
@@ -2426,7 +2592,7 @@
       });
     </script>
 
-    <!-- Add this JavaScript before the closing </body> tag -->
+    
     <!-- Footer model -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {

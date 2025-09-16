@@ -16,6 +16,111 @@ body {
   margin: auto;
 }
 
+/* Header Sidebar */
+.sidebar {
+  padding: 30px 15px;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logo i {
+  color: #00ff80;
+  font-size: 26px;
+}
+
+.logo span {
+  color: #00ff80;
+}
+
+.model-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.description {
+  margin: 25px 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #00ff80;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00ff80;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.contact-text {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.social {
+  margin-top: 40px;
+}
+
+.social h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.social p {
+  font-size: 13px;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.social-iconsbar {
+  display: flex;
+  gap: 12px;
+}
+
+.social-iconsbar a {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.social-iconsbar a:hover {
+  background: #00ff80;
+  color: #000;
+  border-color: #00ff80;
+}
+
 /* Website Load Pop Up */
 .popup-overlay {
   background: rgba(0, 0, 0, 0.7);
@@ -322,91 +427,58 @@ body {
   }
 }
 
-/* .page {
+/* Main wrapper */
+.wrapper {
   position: relative;
   z-index: 10;
-  min-height: 100vh;
-  color: #e6edf3;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
-    Arial;
+  height: 100%;
+  color: #e5e7eb; /* Tailwind text-gray-200 */
 }
 
-.bg-fixed {
+/* Background fixed */
+.background {
   position: fixed;
-  inset: 0; 
+  inset: 0;
   z-index: -10;
   pointer-events: none;
   overflow: hidden;
-  background:
-    radial-gradient(1200px 800px at 10% 10%, rgba(99, 102, 241, 0.18), rgba(99, 102, 241, 0) 60%),
-    radial-gradient(1000px 700px at 90% 80%, rgba(236, 72, 153, 0.12), rgba(236, 72, 153, 0) 60%),
-    radial-gradient(900px 600px at 80% 20%, rgba(45, 212, 191, 0.12), rgba(45, 212, 191, 0) 60%),
-    linear-gradient(180deg, #0b0b13 0%, #111018 40%, #0b0b13 100%);
-  background-repeat: no-repeat;
-  background-size: 120% 120%, 120% 120%, 120% 120%, 100% 100%;
-  background-position: 0% 0%, 100% 100%, 80% 20%, center;
-  animation: bgDrift 20s ease-in-out infinite alternate;
+  /* background: linear-gradient(to bottom, #0f0d12, #141216); */
 }
 
-@keyframes bgDrift {
-  0% {
-    background-position: 0% 0%, 100% 100%, 80% 20%, center;
-    filter: saturate(1);
-  }
-  100% {
-    background-position: 5% 3%, 95% 85%, 78% 22%, center;
-    filter: saturate(1.05);
-  }
-}
-
+/* Decorative blobs */
 .blob {
   position: absolute;
-  border-radius: 9999px;
-  filter: blur(48px);
-  transform: translate3d(0, 0, 0);
-  will-change: transform, opacity;
-  mix-blend-mode: normal;
+  border-radius: 50%;
+  pointer-events: none;
 }
 
-.blob.a {
-  width: 420px;
-  height: 420px;
+.blob-1 {
   top: -80px;
   right: -96px;
-  background: rgba(99, 102, 241, 0.35);
-  filter: blur(60px);
-}
-
-.blob.b {
   width: 420px;
   height: 420px;
+  background: rgba(72, 38, 121, 0.3); /* #482679/30 */
+  filter: blur(48px); /* blur-3xl ~ 48px */
+}
+
+.blob-2 {
   bottom: -96px;
   left: -96px;
-  background: rgba(236, 72, 153, 0.25); 
-  filter: blur(60px);
+  width: 420px;
+  height: 420px;
+  background: rgba(151, 47, 124, 0.3); /* #972F7C/30 */
+  filter: blur(48px);
 }
 
-.blob.c {
-  width: 320px;
-  height: 320px;
+.blob-3 {
   bottom: -160px;
   right: -160px;
-  background: rgba(45, 212, 191, 0.20); 
-  filter: blur(36px);
+  width: 320px;
+  height: 320px;
+  background: rgba(47, 126, 144, 0.2); /* #2F7E90/20 */
+  filter: blur(32px); /* blur-2xl ~ 32px */
 }
 
-
-@media (max-width: 520px) {
-  .blob.a,
-  .blob.b {
-    width: 260px;
-    height: 260px;
-  }
-  .blob.c {
-    width: 200px;
-    height: 200px;
-  }
-} */
 
 /* .content {
   position: relative;
@@ -489,10 +561,10 @@ body {
 }
 
 .btn-primary {
-  background: transparent;
+  background: #006eef;
   color: white;
   padding: 0.75rem 1.5rem;
-  border: 1px solid #ffffff;
+  /* border: 1px solid #ffffff; */
   border-radius: 25px;
   cursor: pointer;
   font-weight: 400;
@@ -744,7 +816,7 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  width: 90vw;
+  width: 95vw;
   max-width: 1200px;
   background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #0a0a0a);
   padding: 40px;
@@ -763,7 +835,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 60px;
+  gap: 25px;
 }
 
 /* Content Section */
@@ -824,67 +896,24 @@ body {
 }
 
 /* Badge Section */
+.badge-slider {
+  max-width: 200px !important;
+}
 .solutions-badge {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 250px;
+  max-width: 200px;
   text-align: center;
-  gap: 20px;
 }
 
 .badge-container {
-  background: linear-gradient(135deg, #1a4a5c, #2d7a8c);
   border-radius: 15px;
   padding: 20px;
   position: relative;
-  min-width: 180px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-.badge-header {
-  background: white;
-  color: #333;
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  padding: 8px 12px;
-  border-radius: 8px 8px 0 0;
-  margin: -20px -20px 10px -20px;
-  letter-spacing: 0.5px;
-}
-
-.badge-main {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: white;
-  margin: 10px 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.badge-banner {
-  background: linear-gradient(45deg, #ffd700, #ffed4e);
-  color: #333;
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  padding: 8px 15px;
-  border-radius: 20px;
-  margin: 10px 0;
-  letter-spacing: 1px;
-  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
-}
-
-.badge-year {
-  background: white;
-  color: #333;
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 0 0 8px 8px;
-  margin: 10px -20px -20px -20px;
-}
 
 .badge-text h4 {
   font-size: 1.8rem;
@@ -922,6 +951,21 @@ body {
 
 .badge-pagination .dot:hover {
   background: rgba(255, 255, 255, 0.6);
+}
+
+.owl-nav button {
+  background: #1e90ff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: #fff !important;
+  font-size: 18px !important;
+  margin: 0 5px;
+  transition: 0.3s;
+}
+
+.owl-nav button:hover {
+  background: #00ff80;
 }
 
 /* Responsive Design */
@@ -980,9 +1024,6 @@ body {
     padding: 15px;
   }
 
-  .badge-main {
-    font-size: 1.8rem;
-  }
 
   .badge-text h4 {
     font-size: 1.5rem;
@@ -1109,7 +1150,7 @@ body {
 
 .hero {
   position: relative;
-  min-height: 85vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1124,7 +1165,7 @@ body {
 }
 
 .hero-subtitle {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 700;
   color: #ffffff;
   opacity: 0;
@@ -1134,7 +1175,7 @@ body {
 }
 
 .hero-title {
-  font-size: 4rem;
+  font-size: 3.8rem;
   font-weight: 700;
   margin-bottom: 1rem;
   animation: fadeInUp 1s ease 0.6s forwards;
@@ -1149,7 +1190,7 @@ body {
 }
 
 .hero-desc {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   font-weight: 700;
   margin-bottom: 2rem;
   color: #ffffff;
@@ -3539,8 +3580,8 @@ swiper-slide img {
 .fcontainer {
   display: flex;
   flex-direction: row;
-  padding: 30px;
-  gap: 40px;
+  padding: 25px;
+  gap: 20px;
   background-image: url(../image/footermodel.png);
   background-size: cover;
   background-position: center;
@@ -3593,16 +3634,19 @@ swiper-slide img {
   margin-bottom: 20px;
 }
 .fhero-content p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   opacity: 0.9;
   line-height: 1.6;
 }
+.ftestimonial-carousel {
+  max-width: 450px !important;
+}
+
 .ftestimonial {
   border-radius: 15px;
   margin-bottom: 30px;
 }
 .fquote-mark {
-  font-size: 4rem;
   opacity: 0.3;
   line-height: 1;
 }
@@ -3643,7 +3687,7 @@ swiper-slide img {
 }
 .fphone-mockup {
   width: 120px;
-  height: 200px;
+  height: 170px;
   background: linear-gradient(45deg, #667eea, #764ba2);
   border-radius: 20px;
   padding: 10px;
@@ -3674,6 +3718,25 @@ swiper-slide img {
   background: #4ecdc4;
 }
 
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+.owl-dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+.owl-dot.active {
+  background: #4ecdc4;
+}
+
+
 /* Right Section */
 .fright-section {
   flex: 1;
@@ -3682,13 +3745,13 @@ swiper-slide img {
   justify-content: center;
 }
 .fform-container {
-  backdrop-filter: blur(20px);
+  /* backdrop-filter: blur(20px); */
   border-radius: 20px;
 }
 .fform-row {
   display: flex;
   gap: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .fform-group {
   flex: 1;
@@ -3702,7 +3765,7 @@ swiper-slide img {
 .fform-group input,
 .fform-group textarea {
   width: 100%;
-  padding: 15px;
+  padding: 13px;
   border: none;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.9);
@@ -3721,12 +3784,11 @@ swiper-slide img {
   align-items: center;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 12px;
-  padding: 2px;
 }
 .fcountry-code {
   display: flex;
   align-items: center;
-  padding: 13px 15px;
+  padding: 13px;
   background: transparent;
   border: none;
   color: #333;
@@ -3749,15 +3811,16 @@ swiper-slide img {
   flex: 1;
   border: none;
   background: transparent;
-  padding: 15px 15px 15px 0;
+  padding: 13px;
 }
 .fbudget-options {
   display: flex;
+  margin-bottom: 10px;
   gap: 10px;
   flex-wrap: wrap;
 }
 .fbudget-option {
-  padding: 12px 18px;
+  padding: 10px 15px;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 25px;
@@ -3781,7 +3844,7 @@ swiper-slide img {
   opacity: 0.8;
 }
 .fsubmit-btn {
-  padding: 15px 40px;
+  padding: 13px 35px;
   background: #007bff;
   color: white;
   border: none;
