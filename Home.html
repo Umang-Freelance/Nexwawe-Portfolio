@@ -120,7 +120,7 @@
 
               <div class="form-group">
                 <textarea
-                  class="form-input form-textarea"
+                  class="form-input"
                   placeholder="Describe Your Project/Idea in Brief"
                   required
                 ></textarea>
@@ -137,14 +137,14 @@
     <header class="container header">
       <nav class="nav-container">
         <div class="logo"><img src="./image/logo.webp" alt="" /></div>
-        <ul class="nav-menu m-0 p-0" id="navMenu">
+        <ul class="nav-menu manag m-0" id="navMenu">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li class="has-dropdown">
             <a href="#services">Services</a>
             <ul>
               <li>
-                <div class="container services-wrapper">
+                <div class="services-wrapper">
                   <div class="services-left">
                     <span class="service-head">SERVICES THAT WE PROVIDE</span>
                     <div class="services-grid">
@@ -538,9 +538,22 @@
           <ul class="nav-menu navMenu m-0 p-0" id="navMenu">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#solutions">Solutions</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
+
+            <li class="mobile-accordion">
+              <button type="button" class="acc-toggle">Services <span class="acc-icon">+</span></button>
+              <div class="acc-panel" data-source="services"></div>
+            </li>
+
+            <li class="mobile-accordion">
+              <button type="button" class="acc-toggle">Solutions <span class="acc-icon">+</span></button>
+              <div class="acc-panel" data-source="solutions"></div>
+            </li>
+
+            <li class="mobile-accordion">
+              <button type="button" class="acc-toggle">Portfolio <span class="acc-icon">+</span></button>
+              <div class="acc-panel" data-source="portfolio"></div>
+            </li>
+
             <li><a href="#blog">Blog</a></li>
           </ul>
           <div class="nav-buttons-group">
@@ -600,7 +613,7 @@
     <section class=" trusted-by">
       <div class="trusted-logos-container">
         <div class="fixed-logo">
-          <img style="width: 150px" src="./image/slider1.webp" alt="" />
+          <img src="./image/slider1.webp" alt="" />
         </div>
         <div class="scrolling-logos">
           <div class="trusted-logos">
@@ -1245,7 +1258,7 @@
 
     <!-- Technology -->
     <section class="container technology-section" style="padding: 40px 0px">
-      <div data-aos="fade-up" data-aos-duration="2000">
+      <div class="px-4" data-aos="fade-up" data-aos-duration="2000">
         <h4>TECHNOLOGY</h4>
         <h2>The Backbone of Our Digital Success</h2>
         <p>
@@ -1393,7 +1406,7 @@
                   </div>
                 </div>
                 <div class="testimonial-image">
-                  <img src="./image/testimonial1.png" alt="Sarah Johnson" />
+                  <img src="./image/testimonial2.png" alt="Sarah Johnson" />
                 </div>
               </div>
             </div>
@@ -1415,7 +1428,7 @@
                   </div>
                 </div>
                 <div class="testimonial-image">
-                  <img src="./image/testimonial1.png" alt="Michael Chen" />
+                  <img src="./image/testimonial3.png" alt="Michael Chen" />
                 </div>
               </div>
             </div>
@@ -1459,7 +1472,7 @@
                   </div>
                 </div>
                 <div class="testimonial-image">
-                  <img src="./image/testimonial1.png" alt="David Kim" />
+                  <img src="./image/testimonial2.png" alt="David Kim" />
                 </div>
               </div>
             </div>
@@ -1718,7 +1731,6 @@
 
         <div class="carousel-wrapper">
           <div class="carousel" id="carousel">
-            <!-- Slide 1: Build-To-Scale Agile Teams -->
             <div class="slide active">
               <div class="text-content">
                 <h3>Build-To-Scale Agile Teams</h3>
@@ -1728,12 +1740,8 @@
                   your operations.
                 </p>
                 <div style="margin-top: 30px">
-                  <div
-                    style="
-                      width: 500px;
-                      border-radius: 16px;
-                      display: inline-block;
-                    "
+                  <div class="slider-content"
+                    
                   >
                     <img
                       style="width: 100%"
@@ -1745,7 +1753,6 @@
               </div>
             </div>
 
-            <!-- Slide 2: Staff Augmentation -->
             <div class="slide">
               <div class="text-content">
                 <h2>Staff Augmentation</h2>
@@ -1810,7 +1817,6 @@
               </div>
             </div>
 
-            <!-- Slide 3: Offshore Development Team -->
             <div class="slide">
               <div class="text-content">
                 <h2>Build Your Offshore Development Team</h2>
@@ -1901,7 +1907,6 @@
             </div>
           </div>
 
-          <!-- Carousel Indicators -->
           <div class="carousel-indicators">
             <div class="indicator active" onclick="goToSlide(0)"></div>
             <div class="indicator" onclick="goToSlide(1)"></div>
@@ -1916,7 +1921,7 @@
       <div class="particles" id="particles"></div>
 
       <div class="info">
-        <div class="info-content">
+        <div class="info-contenttt">
           <h1>Not Just Expertise</h1>
           <p class="tagline">A Partnership for Your Growth</p>
           <p class="tagline">Beyond Solutions, Building Success Together</p>
@@ -1934,87 +1939,75 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="container" style="padding: 40px 0px">
-      <div class="contact contact-section">
-        <div class="contact-left">
-          <h3>
-            Partner with tech catalysts who<br />
-            transform ideas into impact.
-          </h3>
-          <br />
-          <p class="contact-text">Book your free consultation with us.</p>
-          <h1 class="gradient-text">Let's Talk!</h1>
-
-          <div class="office-info">
-            <div class="address-inline">
-              <img
-                id="country-icon"
-                src="./image/icon.webp"
-                alt="Office Icon"
-              />
-              <div class="country-address" id="country-address">
-                <span id="country-name">UNITED ARAB EMIRATES</span>
-                <p>One Central, The Offices 3, Level 3,</br>
-                DWTC, Sheikh Zayed Road, Dubai,</br>
-                United Arab Emirates</p>
-                <span>+971507821690</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="country-selector">
-            <button class="country active" data-country="uae">
-              UAE <img src="https://flagcdn.com/16x12/ae.png" alt="UAE" />
-            </button>
-            <button class="country" data-country="usa">
-              USA <img src="https://flagcdn.com/16x12/us.png" alt="USA" />
-            </button>
-            <button class="country" data-country="uk">
-              UK <img src="https://flagcdn.com/16x12/gb.png" alt="UK" />
-            </button>
-            <button class="country" data-country="india">
-              INDIA <img src="https://flagcdn.com/16x12/in.png" alt="India" />
-            </button>
-          </div>
-        </div>
-      <div class="contact-nav">
-        <button type="button" class="nav-btn prev" aria-label="Previous country">‹</button>
-        <button type="button" class="nav-btn next" aria-label="Next country">›</button>
+    <section class="container contact">
+      <!-- Animated World Map Background -->
+      <div class="map-background">
+          <div class="mapcontainer" id="mapContainer"></div>
       </div>
-
+      <div class="contact-section">
+        <div class="contact-left">
+          <h3>Partner with tech catalysts who transform ideas into impact.</h3>
+          <div class="contact-text">Book your free consultation with us.</div>
+          <div class="gradient-text">Let's Talk</div>
+          <!-- Office Info -->
+                <div class="office-info">
+                    <div class="office-details">
+                        <div class="office-icon">
+                            <img src="./image/icon.webp" alt="">
+                        </div>
+                        <div class="office-text">
+                            <h4 id="country-name">UNITED ARAB EMIRATES</h4>
+                            <p id="office-address">
+                                One Central, The offices 3, Level 3,<br>
+                                DWTC, Sheikh Zayed Road, Dubai,<br>
+                                United Arab Emirates
+                            </p>
+                            <div class="office-phone" id="office-phone">+971 50 782 1690</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="navigation-container">
+                    <div class="country-selector">
+                        <button class="country-btn active" data-country="uae">
+                            <img src="https://flagcdn.com/16x12/ae.png" alt="UAE">
+                            UAE
+                        </button>
+                        <button class="country-btn" data-country="usa">
+                            <img src="https://flagcdn.com/16x12/us.png" alt="USA">
+                            USA
+                        </button>
+                        <button class="country-btn" data-country="uk">
+                            <img src="https://flagcdn.com/16x12/gb.png" alt="UK">
+                            UK
+                        </button>
+                        <button class="country-btn" data-country="india">
+                            <img src="https://flagcdn.com/16x12/in.png" alt="India">
+                            INDIA
+                        </button>
+                    </div>
+                    
+                    <div class="nav-buttons">
+                        <button class="nav-btn prev">‹</button>
+                        <button class="nav-btn next">›</button>
+                    </div>
+                </div>
+            </div>
         <div class="contact-right fade-in-down">
           <h3>Speak With Our Experts</h3>
           <form id="contactForm">
-            <input
-              type="text"
-              name="fullname"
-              placeholder="Full Name"
-              required
-            />
-            <input
-              type="tel"
-              name="phone"
-              placeholder="+91 Mobile Number"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Business Email"
-              required
-            />
-            <select name="launch" required>
-              <option value="">When do you want to launch a solution?</option>
-              <option value="immediately">Immediately</option>
-              <option value="1-3months">1-3 Months</option>
-              <option value="3-6months">3-6 Months</option>
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="text" name="company" placeholder="Company Name">
+            <select name="service" required>
+              <option value="">Select a service</option>
+              <option value="app-development">App Development</option>
+              <option value="ai-development">AI Development</option>
+              <option value="web-development">Web Development</option>
+              <option value="digital-marketing">Digital Marketing</option>
+              <option value="other">Other</option>
             </select>
-            <textarea
-              name="project"
-              rows="4"
-              placeholder="About Project"
-              required
-            ></textarea>
+            <textarea name="message" placeholder="Tell us about your project requirements..." required></textarea>
             <button type="submit">Submit</button>
           </form>
         </div>
@@ -2314,6 +2307,367 @@ for mobile app development services as they are the experts in the merket.
      </script>
 
 
+<!-- Contact Js -->
+<script>
+  // Enhanced script with country highlighting and movement animations
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Dynamically generate cells for the world map
+    const mapContainer = document.getElementById('mapContainer');
+    for (let i = 0; i < 35 * 55; i++) {
+        const cell = document.createElement('div');
+        cell.classList.add('cell');
+        mapContainer.appendChild(cell);
+    }
+
+    // Define specific indices for dots in different regions on the map
+    const regionDots = {
+        northAmerica: [19, 20, 21, 73, 74, 75, 76, 77, 123, 124, 127, 128, 129, 130, 131, 132, 177, 178,
+            179, 181, 182, 183, 184, 185, 186, 187, 188, 228, 229, 230, 231, 232, 233, 234, 237, 238, 239,
+            240, 241, 242, 243, 283, 284, 285, 286, 287, 288, 289, 293, 294, 295, 296, 297, 332, 333, 334,
+            337, 339, 340, 341, 342, 343, 348, 349, 350, 351, 352, 387, 388, 389, 390, 391, 392, 393, 394,
+            395, 396, 397, 398, 399, 404, 405, 406, 407, 441, 442, 443, 444, 445, 446, 447, 448, 449, 450,
+            451, 452, 453, 454, 455, 459, 460, 497, 498, 499, 500, 501, 502, 503, 504, 505, 506, 507, 509,
+            510, 511, 514, 552, 553, 554, 555, 556, 557, 558, 559, 560, 561, 562, 564, 565, 566, 607, 610,
+            611, 612, 613, 614, 615, 616, 619, 620, 621, 622, 666, 667, 668, 669, 670, 671, 672, 674, 675,
+            676, 722, 723, 724, 725, 726, 727, 728, 729, 730, 731, 778, 779, 780, 781, 782, 783, 784, 785,
+            786, 834, 835, 836, 837, 838, 839, 889, 890, 891, 892, 893, 894, 944, 945, 946, 947, 948, 949,
+            1000, 1001, 1002, 1005, 1056, 1057, 1112, 1113, 1114, 1169],
+
+        southAmerica: [1225, 1226, 1227, 1228, 1229, 1281, 1282, 1283, 1284, 1285, 1335, 1336, 1337,
+            1338, 1339, 1340, 1341, 1342, 1390, 1391, 1392, 1393, 1394, 1395, 1396, 1397, 1446, 1447,
+            1448, 1449, 1450, 1451, 1502, 1503, 1504, 1505, 1506, 1557, 1558, 1559, 1560, 1612, 1613,
+            1614, 1666, 1667, 1668, 1721, 1722, 1776, 1777, 1831, 1832, 1887],
+
+        europe: [361, 362, 415, 416, 417, 469, 470, 471, 472, 523, 524, 525, 527, 582, 580, 579, 578, 632,
+            634, 636, 631, 311, 312, 251, 519, 520, 686, 687, 689, 688, 690, 691, 692, 637, 638, 583, 528,
+            473, 418, 474, 475, 365, 421, 476, 477, 531, 530, 529, 584, 585, 586, 639, 640, 641, 693, 694,
+            695, 696, 795, 796, 850, 851, 797, 742, 743, 744, 745, 746, 747, 748, 749, 750, 751, 805, 804,
+            803, 802, 801, 799, 798, 800, 854, 856, 857, 911],
+
+        africa: [961, 962, 963, 965, 1020, 1021, 1019, 1018, 1017, 1016, 1015, 1069, 1070, 1071, 1072,
+            1073, 1074, 1075, 1076, 1077, 1124, 1125, 1126, 1127, 1128, 1129, 1130, 1131, 1132, 1133,
+            1179, 1180, 1181, 1182, 1183, 1184, 1185, 1186, 1187, 1188, 1189, 1235, 1236, 1237, 1238,
+            1239, 1240, 1241, 1242, 1243, 1244, 1293, 1294, 1295, 1296, 1297, 1298, 1348, 1349, 1350,
+            1351, 1352, 1404, 1405, 1406, 1407, 1459, 1460, 1461, 1462, 1514, 1515, 1516, 1518, 1573,
+            1569, 1570, 1571, 1624, 1625],
+
+        asia: [154, 208, 209, 210, 262, 263, 264, 265, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323,
+            325, 326, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 423, 424, 425,
+            426, 427, 428, 429, 430, 431, 432, 433, 434, 435, 436, 437, 438, 439, 440, 478, 479, 480, 481,
+            482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494, 495, 532, 533, 534, 535, 536,
+            537, 538, 539, 540, 541, 542, 543, 544, 545, 546, 547, 548, 549, 550, 587, 588, 589, 590, 591,
+            592, 593, 594, 595, 596, 597, 598, 599, 600, 601, 603, 642, 643, 644, 645, 646, 647, 648, 649,
+            650, 651, 652, 653, 654, 657, 658, 697, 698, 699, 700, 701, 702, 703, 704, 705, 706, 707, 708,
+            709, 712, 752, 753, 754, 755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 807, 808, 809, 810,
+            811, 812, 813, 814, 815, 816, 817, 818, 819, 821, 859, 860, 861, 862, 863, 864, 865, 866, 867,
+            868, 869, 870, 871, 872, 873, 876, 913, 914, 916, 917, 918, 919, 920, 921, 922, 923, 924, 925,
+            926, 928, 930, 967, 968, 969, 970, 972, 973, 974, 975, 976, 977, 978, 979, 980, 981, 982, 1022,
+            1023, 1024, 1025, 1026, 1027, 1029, 1030, 1031, 1034, 1035, 1036, 1037, 1079, 1080, 1081,
+            1085, 1089, 1090, 1135, 1144, 1145, 1200, 1202, 1203, 1255, 1256, 1257, 1311],
+
+        australia: [1206, 1262, 1263, 1317, 1369, 1370, 1372, 1422, 1423, 1424, 1425, 1426, 1427,
+            1428, 1476, 1477, 1478, 1479, 1480, 1481, 1482, 1483, 1531, 1532, 1533, 1534, 1535, 1536,
+            1537, 1538, 1586, 1587, 1590, 1591, 1592, 1645, 1646, 1650, 1705],
+
+        uae: [968, 969, 970, 1023, 1024, 1025, 1026, 1079, 1080] // UAE specific dots
+    };
+
+    // Country to region mapping
+    const countryToRegion = {
+        'uae': 'uae',
+        'usa': 'northAmerica', 
+        'uk': 'europe',
+        'india': 'asia'
+    };
+
+    // Office locations data
+    const officeData = {
+        uae: {
+            name: 'UNITED ARAB EMIRATES',
+            address: 'One Central, The offices 3, Level 3,<br>DWTC, Sheikh Zayed Road, Dubai,<br>United Arab Emirates',
+            phone: '+971 50 782 1690'
+        },
+        usa: {
+            name: 'UNITED STATES',
+            address: '123 Tech Avenue, Suite 456,<br>Silicon Valley, CA 94000,<br>United States',
+            phone: '+1 (555) 123-4567'
+        },
+        uk: {
+            name: 'UNITED KINGDOM',
+            address: '456 Innovation Street, Floor 7,<br>London, EC1A 1BB,<br>United Kingdom',
+            phone: '+44 20 7123 4567'
+        },
+        india: {
+            name: 'INDIA',
+            address: 'Tech Park, Building A, Floor 12,<br>Bangalore, Karnataka 560001,<br>India',
+            phone: '+91 80 1234 5678'
+        }
+    };
+
+    const countries = ['uae', 'usa', 'uk', 'india'];
+    let currentIndex = 0;
+    let currentHighlightedRegion = null;
+
+    // Function to apply CSS animations to specified dot indices
+    function applyAnimation(dotIndices, animationName, animationDuration) {
+        dotIndices.forEach(dotIndex => {
+            const cell = document.querySelector(`.cell:nth-child(${dotIndex})`);
+            if (cell) {
+                cell.style.animation = `${animationName} ${animationDuration}s linear alternate infinite`;
+                cell.style.animationDelay = `-${Math.random() * 1500}ms`;
+            }
+        });
+    }
+
+    // Function to highlight a specific region
+    function highlightRegion(regionName) {
+        // First, remove highlight from previously highlighted region
+        if (currentHighlightedRegion) {
+            const prevDots = regionDots[currentHighlightedRegion];
+            if (prevDots) {
+                prevDots.forEach(dotIndex => {
+                    const cell = document.querySelector(`.cell:nth-child(${dotIndex})`);
+                    if (cell) {
+                        cell.classList.remove('highlighted', 'pulse-highlight');
+                        cell.style.transform = 'scale(1)';
+                        cell.style.boxShadow = 'none';
+                    }
+                });
+            }
+        }
+
+        // Add highlight to new region
+        const dots = regionDots[regionName];
+        if (dots) {
+            dots.forEach((dotIndex, index) => {
+                const cell = document.querySelector(`.cell:nth-child(${dotIndex})`);
+                if (cell) {
+                    // Add highlight class with staggered animation
+                    setTimeout(() => {
+                        cell.classList.add('highlighted', 'pulse-highlight');
+                        cell.style.transform = 'scale(1.3)';
+                        cell.style.boxShadow = '0 0 15px rgba(255, 215, 0, 0.8)';
+                        cell.style.zIndex = '10';
+                    }, index * 20);
+                }
+            });
+
+            // Smooth scroll to region center
+            scrollToRegion(regionName);
+            currentHighlightedRegion = regionName;
+        }
+    }
+
+    // Function to scroll to a specific region
+    function scrollToRegion(regionName) {
+        const dots = regionDots[regionName];
+        if (!dots || dots.length === 0) return;
+
+        // Calculate center position of the region
+        const mapWidth = 55; // Grid width
+        const centerDotIndex = dots[Math.floor(dots.length / 2)];
+        const row = Math.floor(centerDotIndex / mapWidth);
+        const col = centerDotIndex % mapWidth;
+
+        // Calculate scroll position
+        const mapContainer = document.getElementById('mapContainer');
+        const cellSize = 8; // Approximate cell size
+        const targetX = (col * cellSize) - (mapContainer.offsetWidth / 2);
+        const targetY = (row * cellSize) - (mapContainer.offsetHeight / 2);
+
+        // Smooth scroll animation
+        mapContainer.scrollTo({
+            left: Math.max(0, targetX),
+            top: Math.max(0, targetY),
+            behavior: 'smooth'
+        });
+    }
+
+    // Function to update office info and highlight region
+    function updateOfficeInfo(country) {
+        const data = officeData[country];
+        const regionName = countryToRegion[country];
+
+        // Update office details
+        document.getElementById('country-name').textContent = data.name;
+        document.getElementById('office-address').innerHTML = data.address;
+        document.getElementById('office-phone').textContent = data.phone;
+        
+        // Update active button with animation
+        document.querySelectorAll('.country-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        const activeBtn = document.querySelector(`[data-country="${country}"]`);
+        if (activeBtn) {
+            activeBtn.classList.add('active');
+            // Add pulse effect to active button
+            activeBtn.style.animation = 'pulse 0.6s ease-in-out';
+            setTimeout(() => {
+                activeBtn.style.animation = '';
+            }, 600);
+        }
+
+        // Highlight the corresponding region on map
+        if (regionName) {
+            highlightRegion(regionName);
+        }
+    }
+
+    // Initialize all region animations
+    function initializeRegionAnimations() {
+        applyAnimation(regionDots.northAmerica, 'north-america', 1);
+        applyAnimation(regionDots.southAmerica, 'south-america', 1);
+        applyAnimation(regionDots.europe, 'europe', 1);
+        applyAnimation(regionDots.africa, 'africa', 1);
+        applyAnimation(regionDots.asia, 'asia', 1);
+        applyAnimation(regionDots.australia, 'australia', 1);
+        applyAnimation(regionDots.uae, 'saudi', 1);
+    }
+
+    // Country button clicks
+    document.querySelectorAll('.country-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const country = btn.dataset.country;
+            currentIndex = countries.indexOf(country);
+            updateOfficeInfo(country);
+        });
+    });
+
+    // Navigation buttons
+    document.querySelector('.prev').addEventListener('click', (e) => {
+        e.preventDefault();
+        currentIndex = (currentIndex - 1 + countries.length) % countries.length;
+        updateOfficeInfo(countries[currentIndex]);
+    });
+
+    document.querySelector('.next').addEventListener('click', (e) => {
+        e.preventDefault();
+        currentIndex = (currentIndex + 1) % countries.length;
+        updateOfficeInfo(countries[currentIndex]);
+    });
+
+    // Initialize animations when elements come into view
+    function initializeAnimations() {
+        const contactLeft = document.querySelector('.contact-left');
+        const contactRight = document.querySelector('.contact-right');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('contact-left')) {
+                        entry.target.classList.add('animate');
+                    }
+                    if (entry.target.classList.contains('contact-right')) {
+                        entry.target.classList.add('show');
+                    }
+                }
+            });
+        }, { threshold: 0.3 });
+
+        if (contactLeft) observer.observe(contactLeft);
+        if (contactRight) observer.observe(contactRight);
+    }
+
+    // Create floating particles for footer
+    function createParticles() {
+        const particlesContainer = document.getElementById('particles');
+        if (!particlesContainer) return;
+        
+        for (let i = 0; i < 50; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            
+            const size = Math.random() * 4 + 2;
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 12 + 's';
+            particle.style.animationDuration = (Math.random() * 8 + 8) + 's';
+            
+            particlesContainer.appendChild(particle);
+        }
+    }
+
+    // Form submission handling
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            
+            if (data.name && data.email && data.message) {
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        });
+    }
+
+    // Initialize everything
+    initializeRegionAnimations();
+    createParticles();
+    initializeAnimations();
+    
+    // Initialize with UAE selected and highlighted
+    updateOfficeInfo('uae');
+});
+
+// Add required CSS for highlighting animation
+const highlightStyles = document.createElement('style');
+highlightStyles.textContent = `
+    .cell.highlighted {
+        background: linear-gradient(45deg, #ffd700, #ffed4e) !important;
+        border-radius: 50%;
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        position: relative;
+    }
+    
+    .cell.pulse-highlight {
+        animation: pulseGlow 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulseGlow {
+        0%, 100% {
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+            transform: scale(1.3);
+        }
+        50% {
+            box-shadow: 0 0 25px rgba(255, 215, 0, 1), 0 0 35px rgba(255, 215, 0, 0.5);
+            transform: scale(1.5);
+        }
+    }
+    
+    .country-btn {
+        transition: all 0.3s ease;
+    }
+    
+    .country-btn.active {
+        transform: translateY(-2px);
+    }
+    
+    @keyframes pulse {
+        0% { transform: scale(1) translateY(-2px); }
+        50% { transform: scale(1.05) translateY(-4px); }
+        100% { transform: scale(1) translateY(-2px); }
+    }
+    
+    .mapcontainer {
+        transition: all 0.5s ease;
+    }
+`;
+
+document.head.appendChild(highlightStyles);
+</script>
+
+
     <!-- ✅ JavaScript -->
     <script>
       function animateCounter(counter) {
@@ -2540,7 +2894,7 @@ for mobile app development services as they are the experts in the merket.
         nav: false,
         responsive: {
           0: { items: 1 },
-          576: { items: 2 },
+          425: { items: 2 },
           768: { items: 3 },
           1024: { items: 4 },
           1200: { items: 5 },
@@ -2589,6 +2943,46 @@ for mobile app development services as they are the experts in the merket.
             spaceBetween: 40,
           },
         },
+      });
+    </script>
+
+    <!-- offcanvas -->
+    <script>
+      // Mobile Offcanvas Accordion: clone desktop submenu content
+      document.addEventListener("DOMContentLoaded", function () {
+        const offcanvas = document.getElementById("offcanvasTop");
+        if (!offcanvas) return;
+
+        const map = {
+          services: document.querySelector(".has-dropdown > ul"),
+          solutions: document.querySelector(".has-dropdownTwo .solutions"),
+          portfolio: document.querySelector(".has-dropdownThree .portfolio-info"),
+        };
+
+        offcanvas.querySelectorAll(".mobile-accordion").forEach((item) => {
+          const btn = item.querySelector(".acc-toggle");
+          const panel = item.querySelector(".acc-panel");
+          const type = panel?.getAttribute("data-source");
+          let loaded = false;
+
+          btn?.addEventListener("click", () => {
+            const open = item.classList.toggle("open");
+            // close siblings
+            offcanvas.querySelectorAll(".mobile-accordion").forEach((sib) => {
+              if (sib !== item) sib.classList.remove("open");
+            });
+            // lazy-load content once
+            if (!loaded && type && map[type]) {
+              panel.innerHTML = map[type].innerHTML;
+              loaded = true;
+            }
+          });
+        });
+
+        // Reset accordion state when offcanvas closes
+        offcanvas.addEventListener("hidden.bs.offcanvas", () => {
+          offcanvas.querySelectorAll(".mobile-accordion").forEach((i) => i.classList.remove("open"));
+        });
       });
     </script>
 
