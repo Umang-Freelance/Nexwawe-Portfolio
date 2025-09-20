@@ -852,7 +852,7 @@
 
 /* Circle Section Css */
 .section {
-  padding: 60px 20px;
+  /* padding: 60px 20px; */
   min-height: 100vh;
   position: relative;
 }
@@ -1024,19 +1024,19 @@
 .clocks-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 20px;
+  /* gap: 20px; */
   margin-top: 30px;
 }
 
 .clock-card {
-  background: linear-gradient(
+  /* background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.1) 0%,
     rgba(255, 255, 255, 0.02) 100%
-  );
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  ); */
+  /* border: 1px solid rgba(255, 255, 255, 0.15); */
   border-radius: 16px;
-  padding: 20px;
+  /* padding: 20px; */
   text-align: center;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -1059,7 +1059,7 @@
 
 .clock-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(79, 70, 229, 0.2);
+  /* box-shadow: 0 20px 40px rgba(79, 70, 229, 0.2); */
 }
 
 .clock-card:hover::before {
@@ -1067,8 +1067,8 @@
 }
 
 .clock-canvas {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   position: relative;
   z-index: 1;
 }
@@ -1121,7 +1121,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--gradient-1);
   opacity: 0;
   transition: opacity 0.3s ease;
   border-radius: 50%;
@@ -1137,7 +1136,30 @@
 }
 
 .step.blue {
-  background: var(--gradient-1);
+  background: black;
+  color: white;
+}
+
+.two h4 {
+  font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-align: center;
+    color: black;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.two p {
+    font-size: 12px;
+    text-align: center;
+    color: black;
+    line-height: 1.4;
+    padding: 0 16px;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
 }
 
 .step img {
@@ -1154,7 +1176,7 @@
   font-weight: 600;
   margin-bottom: 8px;
   text-align: center;
-  color: #1f2937;
+  /* color: #1f2937; */
   position: relative;
   z-index: 1;
   transition: color 0.3s ease;
@@ -1163,7 +1185,7 @@
 .step p {
   font-size: 12px;
   text-align: center;
-  color: #6b7280;
+  /* color: #6b7280; */
   line-height: 1.4;
   padding: 0 16px;
   position: relative;
@@ -1254,10 +1276,25 @@
   }
 }
 
-@media (max-width: 768px) {
-  .section {
-    padding: 40px 15px;
+@media (max-width: 1024px) {
+  .slide {
+    background: none;
   }
+  
+}
+
+@media (max-width: 768px) {
+  /* .section {
+    padding: 40px 15px;
+  } */
+   .step h4 {
+    font-size: 14px;
+    padding: 0px 10px;
+   }
+   .step p {
+    font-size: 10px;
+    padding: 0px 20px;
+   }
 
   .slider-content {
     width: auto !important;
@@ -1281,9 +1318,9 @@
     padding: 20px;
   }
 
-  .text-content {
+  /* .text-content {
     padding: 24px;
-  }
+  } */
 
   .clocks-container {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -1307,17 +1344,17 @@
 }
 
 @media (max-width: 480px) {
-  .section {
+  /* .section {
     padding: 30px 10px;
-  }
+  } */
 
   .slide {
     padding: 15px;
   }
 
-  .text-content {
+  /* .text-content {
     padding: 20px;
-  }
+  } */
 
   .clocks-container {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -1330,8 +1367,8 @@
   }
 
   .step {
-    width: 140px;
-    height: 140px;
+    width: 160px;
+    height: 160px;
   }
 
   .process-steps {
@@ -1352,8 +1389,8 @@
   }
 
   .step {
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
   }
 
   .step h4 {
@@ -1729,13 +1766,13 @@
   /* min-width: 300px;
   max-width: 500px; */
   transition: all 0.8s ease-in-out;
-  opacity: 0;
-  transform: translateY(50px);
+  /* opacity: 0;
+  transform: translateY(50px); */
 }
 
 .contact-left.animate {
-  opacity: 1;
-  transform: translateY(0);
+  /* opacity: 1;
+  transform: translateY(0); */
 }
 
 .contact-left h3 {
@@ -1756,9 +1793,9 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-size: 65px;
+  font-size: 57px;
   font-weight: 600;
-  padding: 20px 0;
+  padding: 13px 0;
   line-height: 1.2;
 }
 
@@ -1922,7 +1959,8 @@
 /* ===== Navigation Arrows ===== */
 .nav-buttons {
   display: flex;
-  justify-content: center;
+  justify-content: end;
+  align-items: center;
   gap: 12px;
   margin-top: 15px;
 }
@@ -1960,20 +1998,27 @@
   max-width: 500px; */
   /* background: url("../image/bg2.webp") no-repeat center center; */
   background-size: cover;
-  padding: 40px;
+ background: radial-gradient(
+    circle at 35% 40%,       /* gradient center slightly left & top */
+    rgba(0, 102, 255, 0.8) 0%,  /* bright electric blue */
+    rgba(10, 25, 47, 0.95) 45%, /* mid deep navy */
+    #000814 100%               /* outer very dark navy */
+  );
+  opacity: 0.5;
+  padding: 20px;
   border-radius: 15px;
   border: 1px solid rgba(0, 0, 255, 0.3);
   color: #fff;
   transition: opacity 1s ease, transform 1s ease;
-  opacity: 0;
-  transform: translateY(50px);
+  /* opacity: 0; */
+  /* transform: translateY(50px); */
   /* backdrop-filter: blur(5px); */
-  background-color: rgba(0, 0, 0, 0.3);
+  /* background-color: rgba(0, 0, 0, 0.3); */
 }
 
 .contact-right.fade-in-down.show {
-  opacity: 1;
-  transform: translateY(0);
+  /* opacity: 1; */
+  /* transform: translateY(0); */
 }
 
 .contact-right h3 {
@@ -2120,9 +2165,42 @@
   }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    .mapcontainer {
+    transform: scale(0.8) !important;
+  }
+  .contact-right h3 {
+    margin-bottom: 10px;
+  }
+
+  .contact-left h3 {
+    font-size: 16px !important;
+  }
+  .contact-left .contact-text {
+    font-size: 14px !important;
+    margin-bottom: 10px;
+  }
+
+  #contactForm input, #contactForm select, #contactForm textarea {
+    margin-bottom: 10px !important;
+  }
+
+  .office-info h4 {
+    font-size: 14px !important;
+  }
+
+  .gradient-text {
+    font-size: 35px !important;
+  }
+}
+
 @media (max-width: 480px) {
   .gradient-text {
     font-size: 35px;
+  }
+
+  .mapcontainer {
+    transform: scale(0.4) !important;
   }
 
   .contact-nav {
@@ -2388,7 +2466,7 @@ footer::after {
 }
 
 .footer-left img {
-  width: 180px;
+  width: 120px;
   height: auto;
   filter: brightness(1.2);
   transition: all 0.3s ease;
@@ -2421,13 +2499,13 @@ footer::after {
 
 .contact-btn {
   display: inline-block;
-  padding: 16px 32px;
+  padding: 14px 24px;
   background: linear-gradient(45deg, #007bff, #00c3ff);
   border-radius: 50px;
   color: #fff;
   font-weight: 600;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
