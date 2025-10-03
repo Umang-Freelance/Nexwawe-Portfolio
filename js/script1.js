@@ -61,11 +61,20 @@ autoSlide();
   ];
 
   function drawClock(canvas, date) {
+  const dpr = window.devicePixelRatio || 1;
+  const cssWidth = canvas.clientWidth || canvas.width;
+  const cssHeight = canvas.clientHeight || canvas.height;
+  const desiredWidth = Math.round(cssWidth * dpr);
+  const desiredHeight = Math.round(cssHeight * dpr);
+  if (canvas.width !== desiredWidth) canvas.width = desiredWidth;
+  if (canvas.height !== desiredHeight) canvas.height = desiredHeight;
+
   const ctx = canvas.getContext("2d");
-  const radius = canvas.height / 2;
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.save();
-  ctx.translate(radius, radius);
+  const radius = Math.min(canvas.width, canvas.height) / 2;
+  ctx.translate(canvas.width / 2, canvas.height / 2);
 
   ctx.beginPath();
   ctx.arc(0, 0, radius * 0.95, 0, 2 * Math.PI);
