@@ -15,6 +15,23 @@ body {
 .sidebar {
   /* padding: 30px 15px; */
   position: relative;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none; /* WebKit */
+}
+
+.offcanvas-body {
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.offcanvas-body::-webkit-scrollbar {
+  display: none;
 }
 
 .sidebar-logo {
@@ -119,6 +136,11 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 1000;
+}
+
+/* Prevent body scroll when popup is visible */
+body.popup-open {
+  overflow: hidden !important;
 }
 
 .popup-container {
@@ -460,10 +482,8 @@ body {
   z-index: -10;
   pointer-events: none;
   overflow: hidden;
-  /* background: linear-gradient(to bottom, #0f0d12, #141216); */
 }
 
-/* Decorative blobs */
 .blob {
   position: absolute;
   border-radius: 50%;
@@ -475,8 +495,8 @@ body {
   right: -96px;
   width: 420px;
   height: 420px;
-  background: rgba(72, 38, 121, 0.3); /* #482679/30 */
-  filter: blur(48px); /* blur-3xl ~ 48px */
+  background: rgba(72, 38, 121, 0.3);
+  filter: blur(48px);
 }
 
 .blob-2 {
@@ -484,7 +504,7 @@ body {
   left: -96px;
   width: 420px;
   height: 420px;
-  background: rgba(151, 47, 124, 0.3); /* #972F7C/30 */
+  background: rgba(151, 47, 124, 0.3);
   filter: blur(48px);
 }
 
@@ -493,8 +513,8 @@ body {
   right: -160px;
   width: 320px;
   height: 320px;
-  background: rgba(47, 126, 144, 0.2); /* #2F7E90/20 */
-  filter: blur(32px); /* blur-2xl ~ 32px */
+  background: rgba(47, 126, 144, 0.2);
+  filter: blur(32px);
 }
 
 /* .content {
@@ -2177,8 +2197,11 @@ body {
 .awards-section {
   background: black;
   color: white;
-  background-image: url(../image/award-bg.png);
+  /* gradient overlay + texture image */
+  background-image: linear-gradient(135deg, rgba(0, 174, 255, 0.12) 0%, rgba(255, 92, 0, 0.12) 50%, rgba(0, 0, 0, 0.6) 100%), url(../image/award-bg.png);
+  background-blend-mode: overlay, normal;
   background-size: cover;
+  background-position: center;
   object-fit: cover;
   padding: 30px;
   position: relative;
@@ -4476,3 +4499,20 @@ swiper-slide img {
 /* .mobile-accordion.open .acc-toggle {
   background: rgba(255, 255, 255, 0.03);
 } */
+
+/* Modal scroll prevention */
+body.modal-open {
+  overflow: hidden !important;
+  position: fixed !important;
+  width: 100% !important;
+}
+
+.modal {
+  overflow-y: auto;
+}
+
+.modal-dialog {
+  margin: 0;
+  max-height: 100vh;
+  overflow-y: auto;
+}
