@@ -28,41 +28,11 @@ const acc = document.querySelectorAll(".accordion");
   });
 
 
-  // img section
-
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
-
-function changeSlide() {
-    slides[currentSlide].style.opacity = 0;
-    currentSlide = (currentSlide + 1) % totalSlides;
-    slides[currentSlide].style.opacity = 1;
-}
-
-setInterval(changeSlide, 4000); 
+// img section (removed: handled by circle-section carousel in script1.js)
 
 
 
-// SLIDER FUNCTIONALITY
-    const track = document.querySelector('.slider-track');
-    const slides = document.querySelectorAll('.slide');
-    const prevBtn = document.querySelector('.prev');
-    const nextBtn = document.querySelector('.next');
-    let index = 0;
-
-    function showSlide(i) {
-      if (i < 0) index = slides.length - 1;
-      else if (i >= slides.length) index = 0;
-      else index = i;
-      track.style.transform = `translateX(-${index * 100}%)`;
-    }
-
-    prevBtn.addEventListener('click', () => showSlide(index - 1));
-    nextBtn.addEventListener('click', () => showSlide(index + 1));
-
-    // Auto Slide
-    setInterval(() => showSlide(index + 1), 5000);
+// SLIDER FUNCTIONALITY (removed: superseded by circle-section carousel in script1.js)
 
     // CLOCK FUNCTIONALITY
     function updateTime() {

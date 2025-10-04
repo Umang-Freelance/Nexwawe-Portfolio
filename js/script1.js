@@ -23,33 +23,74 @@ document.addEventListener("DOMContentLoaded", () => {
 let currentIndex = 0;
 let autoScroll;
 
+// cache references used repeatedly
+const slideNodes = carousel ? Array.from(carousel.querySelectorAll('.slide')) : [];
+const indicatorNodes = Array.from(document.querySelectorAll('.carousel-indicators .indicator'));
+
+function setActive(index) {
+  slideNodes.forEach((s, i) => s.classList.toggle('active', i === index));
+  indicatorNodes.forEach((d, i) => d.classList.toggle('active', i === index));
+}
+
 function showSlide(index) {
-  const totalSlides = document.querySelectorAll('.slide').length;
+  const totalSlides = slideNodes.length || document.querySelectorAll('.slide').length;
+  if (!carousel || totalSlides === 0) return;
+
   if (index >= totalSlides) index = 0;
   if (index < 0) index = totalSlides - 1;
 
   currentIndex = index;
-  carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+  carousel.style.transform = `translateX(-${currentIndex * 85}%)`;
+  setActive(currentIndex);
 }
 
 function autoSlide() {
+  if (autoScroll) return;
   autoScroll = setInterval(() => {
     showSlide(currentIndex + 1);
-  }, 6000);
+  }, 3000);
+}
+
+function stopAuto() {
+  if (!autoScroll) return;
+  clearInterval(autoScroll);
+  autoScroll = null;
 }
 
 function nextSlide() {
-  clearInterval(autoScroll);
+  stopAuto();
   showSlide(currentIndex + 1);
   autoSlide();
 }
 
 function prevSlide() {
-  clearInterval(autoScroll);
+  stopAuto();
   showSlide(currentIndex - 1);
   autoSlide();
 }
 
+function goToSlide(i) {
+  stopAuto();
+  showSlide(i);
+  autoSlide();
+}
+
+// bind indicators click if present (in addition to inline onclick)
+indicatorNodes.forEach((dot, i) => {
+  dot.addEventListener('click', () => goToSlide(i));
+});
+
+// pause on hover
+if (carousel) {
+  const wrapper = carousel.closest('.carousel-wrapper');
+  if (wrapper) {
+    wrapper.addEventListener('mouseenter', stopAuto);
+    wrapper.addEventListener('mouseleave', autoSlide);
+  }
+}
+
+// initialize to first visible slide
+showSlide(currentIndex);
 autoSlide();
 
   const clocks = [

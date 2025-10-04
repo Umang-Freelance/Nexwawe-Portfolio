@@ -946,27 +946,31 @@
 .carousel-wrapper {
   position: relative;
   overflow: hidden;
-  border-radius: 24px;
-  backdrop-filter: blur(20px);
-  background: rgba(255, 255, 255, 0.02);
+  /* border-radius: 24px; */
+  /* backdrop-filter: blur(20px); */
+  /* background: rgba(255, 255, 255, 0.02); */
   /* border: 1px solid rgba(255, 255, 255, 0.1); */
 }
 
 .carousel {
   display: flex;
+  gap: 22px;
   transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   will-change: transform;
 }
 
 .slide {
-  min-width: 100%;
+  min-width: 85%;
   padding: 30px;
   position: relative;
   opacity: 0;
   animation: slideIn 0.8s ease-out forwards;
   background-image: url(../image/watch-bg.png);
   background-size: cover;
-  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .slider-content {
@@ -1028,8 +1032,12 @@
 }
 
 .clocks-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); */
+  display: flex;
+  justify-content: space-evenly;
+  gap: 25px;
+  overflow-x: auto;
   /* gap: 20px; */
   margin-top: 30px;
 }
@@ -1046,7 +1054,7 @@
   text-align: center;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
@@ -1096,8 +1104,11 @@
 }
 
 .process-steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  display: flex;
+  justify-content: space-evenly;
+  overflow-x: auto;
   --step-gap: 30px;
   gap: var(--step-gap);
   margin-top: 40px;
@@ -1106,7 +1117,7 @@
 
 .step {
   background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-  width: 200px;
+  min-width: 200px;
   height: 200px;
   border-radius: 50%;
   display: flex;
@@ -1337,15 +1348,15 @@
 }
 
 @media (max-width: 1200px) {
-  .step {
+  /* .step {
     width: 180px;
     height: 180px;
-  }
+  } */
 
-  .process-steps {
+  /* .process-steps {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 20px;
-  }
+  } */
 }
 
 @media (max-width: 1024px) {
@@ -1393,25 +1404,25 @@
     padding: 24px;
   } */
 
-  .clocks-container {
+  /* .clocks-container {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 16px;
-  }
+  } */
 
   .clock-canvas {
     width: 100px;
     height: 100px;
   }
 
-  .step {
+  /* .step {
     width: 160px;
     height: 160px;
-  }
+  } */
 
-  .process-steps {
+  /* .process-steps {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-  }
+  } */
 }
 
 @media (max-width: 480px) {
@@ -1427,10 +1438,10 @@
     padding: 20px;
   } */
 
-  .clocks-container {
+  /* .clocks-container {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 12px;
-  }
+  } */
 
   .clock-canvas {
     width: 80px;
@@ -1442,10 +1453,10 @@
     height: 160px;
   }
 
-  .process-steps {
+  /* .process-steps {
     grid-template-columns: 1fr;
     gap: 16px;
-  }
+  } */
 
   .nav-button {
     width: 44px;

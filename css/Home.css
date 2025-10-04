@@ -146,7 +146,7 @@ body.popup-open {
 .popup-container {
   background: black;
   z-index: 10;
-  border-radius: 20px;
+  border-radius: 6px;
   padding: 0;
   max-width: 800px;
   width: 100%;
@@ -164,8 +164,8 @@ body.popup-open {
   background: white;
   border: none;
   border-radius: 50%;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   color: black;
   font-size: 18px;
   cursor: pointer;
@@ -325,9 +325,9 @@ body.popup-open {
   background: rgba(0, 0, 0, 0.6);
   color: white;
   border: none;
-  padding: 16px 40px;
+  padding: 12px 24px;
   border-radius: 25px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -477,7 +477,8 @@ body.popup-open {
 
 /* Background fixed */
 .background {
-  position: fixed;
+  /* position: fixed; */
+  /* position: relative; */
   inset: 0;
   z-index: -10;
   pointer-events: none;
@@ -490,32 +491,204 @@ body.popup-open {
   pointer-events: none;
 }
 
+@media (max-width: 768px) {
+  .blob-1, .blob-2, .blob-3, .blob-4, .blob-5, .blob-6, .blob-7, .blob-8, .blob-9, .blob-10 {
+    width: 400px !important;
+    height: 400px !important;
+  }
+}
+
 .blob-1 {
-  top: -80px;
-  right: -96px;
-  width: 420px;
-  height: 420px;
-  background: rgba(72, 38, 121, 0.3);
+  position: absolute;
+  top: 240%;
+  left: -150px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(115, 55, 190, 0.5) 0%,
+    rgba(115, 55, 190, 0.4) 30%,
+    rgba(115, 55, 190, 0.3) 50%,
+    rgba(115, 55, 190, 0.2) 70%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
   filter: blur(48px);
+  /* z-index: 10; */
 }
 
 .blob-2 {
-  bottom: -96px;
-  left: -96px;
-  width: 420px;
-  height: 420px;
-  background: rgba(151, 47, 124, 0.3);
+  position: absolute;
+  bottom: -450px;
+  left: -80px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 0, 0, 0.3) 0%,
+    rgba(255, 0, 0, 0.2) 30%,
+    rgba(255, 0, 0, 0.1) 50%,
+    rgba(255, 0, 0, 0.1) 70%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
   filter: blur(48px);
+  /* z-index: 10; */
 }
 
 .blob-3 {
-  bottom: -160px;
-  right: -160px;
-  width: 320px;
-  height: 320px;
-  background: rgba(47, 126, 144, 0.2);
-  filter: blur(32px);
+  position: absolute;
+  bottom: -800px;
+  right: 0px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(47, 126, 255, 0.4) 0%,
+    rgba(47, 126, 255, 0.3) 30%,
+    rgba(47, 126, 255, 0.2) 50%,
+    rgba(47, 126, 255, 0.1) 70%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  filter: blur(48px);
+  /* z-index: 10; */
 }
+
+.blob-4 {
+  position: absolute;
+  bottom: -285%;
+  right: 0px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(47, 126, 255, 0.4) 0%,
+    rgba(47, 126, 255, 0.3) 30%,
+    rgba(47, 126, 255, 0.2) 50%,
+    rgba(47, 126, 255, 0.1) 70%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  filter: blur(48px);
+  /* z-index: 10; */
+}
+
+.blob-5 {
+  position: absolute;
+  bottom: -400%;
+  left: -150px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 0, 0, 0.3) 0%,
+    rgba(255, 0, 0, 0.2) 30%,
+    rgba(255, 0, 0, 0.1) 50%,
+    rgba(255, 0, 0, 0.1) 70%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  filter: blur(48px);
+  /* z-index: 10; */
+}
+
+.blob-6 {
+  position: absolute;
+  bottom: -490%;
+  right: 0px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(47, 126, 255, 0.4) 0%,
+    rgba(47, 126, 255, 0.3) 30%,
+    rgba(47, 126, 255, 0.2) 50%,
+    rgba(47, 126, 255, 0.1) 70%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  filter: blur(48px);
+  /* z-index: 10; */
+}
+
+.blob-7 {
+  position: absolute;
+  bottom: -600%;
+  left: -150px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(115, 55, 190, 0.5) 0%,
+    rgba(115, 55, 190, 0.4) 30%,
+    rgba(115, 55, 190, 0.3) 50%,
+    rgba(115, 55, 190, 0.2) 70%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  filter: blur(48px);
+  /* z-index: 10; */
+}
+
+.blob-8 {
+  position: absolute;
+  bottom: -670%;
+  right: 0px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(47, 126, 255, 0.4) 0%,
+    rgba(47, 126, 255, 0.3) 30%,
+    rgba(47, 126, 255, 0.2) 50%,
+    rgba(47, 126, 255, 0.1) 70%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  filter: blur(48px);
+  /* z-index: 10; */
+}
+
+.blob-9 {
+  position: absolute;
+  bottom: -770%;
+  left: -150px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 0, 0, 0.3) 0%,
+    rgba(255, 0, 0, 0.2) 30%,
+    rgba(255, 0, 0, 0.1) 50%,
+    rgba(255, 0, 0, 0.1) 70%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  filter: blur(48px);
+  /* z-index: 10; */
+}
+
+.blob-10 {
+  position: absolute;
+  bottom: -850%;
+  right: 0px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(47, 126, 255, 0.4) 0%,
+    rgba(47, 126, 255, 0.3) 30%,
+    rgba(47, 126, 255, 0.2) 50%,
+    rgba(47, 126, 255, 0.1) 70%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  filter: blur(48px);
+  /* z-index: 10; */
+}
+
+
 
 /* .content {
   position: relative;
@@ -1540,7 +1713,7 @@ body.popup-open {
 
 .scrolling-logos::before {
   left: 0;
-  background: linear-gradient(to right, black, transparent);
+  /* background: linear-gradient(to right, black, transparent); */
 }
 
 .scrolling-logos::after {
