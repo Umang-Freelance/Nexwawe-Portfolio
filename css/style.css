@@ -1109,7 +1109,7 @@
   display: flex;
   justify-content: space-evenly;
   overflow-x: auto;
-  --step-gap: 30px;
+  --step-gap: 20px;
   gap: var(--step-gap);
   margin-top: 40px;
   position: relative;
@@ -1117,8 +1117,8 @@
 
 .step {
   background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-  min-width: 200px;
-  height: 200px;
+  min-width: 200px !important;
+  height: 200px !important;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
@@ -1256,7 +1256,7 @@
 } */
 
 /* Arrow between steps (hidden on the last step) - centered between circles */
-.process-steps .step:not(:last-child) h4::after {
+/* .process-steps .step:not(:last-child) h4::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -1267,7 +1267,7 @@
   background: url("../image/rightarrow.png") no-repeat center / contain;
   pointer-events: none;
   z-index: 2;
-}
+} */
 
 /* Responsive: hide arrows when steps wrap to multiple rows */
 @media (max-width: 900px) {
@@ -1448,10 +1448,10 @@
     height: 80px;
   }
 
-  .step {
+  /* .step {
     width: 160px;
     height: 160px;
-  }
+  } */
 
   /* .process-steps {
     grid-template-columns: 1fr;
@@ -1470,10 +1470,10 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .step {
+  /* .step {
     width: 160px;
     height: 160px;
-  }
+  } */
 
   .step h4 {
     font-size: 14px;
